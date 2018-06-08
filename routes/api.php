@@ -1,18 +1,27 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+Route::group(['prefix'=>'/user', 'middleware'=>['web']],function () {
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+    Route::post('/login', [
+        'uses' => 'Auth\LoginController@login',
+    ]);
+
+    Route::get('/logout', [
+        'uses' => 'Auth\LoginController@logout',
+    ]);
+
 });
+
+Route::group(['prefix'=>'/temp'],function () {
+    Route::post('/storeTempPic',[
+        'uses' => 'TempController@storeTempPic',
+    ]);
+
+    Route::post('/storeTempDoc',[
+        'uses' => 'TempController@storeTempDoc',
+    ]);
+});
+
+\App\Util\CRUD\RouteUtils::dynamicAddRoutes('/user','UserController',['web']);
