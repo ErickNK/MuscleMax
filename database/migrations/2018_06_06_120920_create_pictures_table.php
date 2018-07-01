@@ -18,8 +18,10 @@ class CreatePicturesTable extends Migration
             $table->increments('id');
 
             $table->string('name');
+            $table->string('type');
+            $table->unsignedInteger('size');
             $table->string('description')->nullable();
-            $table->string('location');
+            $table->string('remote_location');
 
             //polymorphic relationship
             $table->morphs('picturable');

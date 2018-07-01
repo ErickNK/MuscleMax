@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Input;
 
 trait HandlesCRUD
 {
-    use HandlesImages;
 
     /**
      * Errors found in processing services.

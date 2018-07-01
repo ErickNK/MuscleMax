@@ -94,17 +94,39 @@ trait HandlesImages
         $path = $this->picPath .'/'. end($fileName);
 
         //Store in public folder
-        Storage::move($request->image, 'public/'. $path);
+        if ( Storage::move($request->image, 'public/'. $path) &&
 
         Picture::create([
             'name'=>$request->get('name'),
             'description'=>$request->get('description'),
             'location' => $path,
+            'type' => $request->get('type'),
+            'size' => $request->get('size'),
             'picturable_id' => $id,
             'picturable_type' => $this->picType
-        ]);
+        ]))
+            return true;
+        else return false;
+    }
 
-        return true;
+    public function saveImagesFromTemp(array $picture,$id){
+        //TODO: add errors
+        $fileName = explode('/',$picture['remote_location']);
+        $path = $this->picPath .'/'. end($fileName);
+
+        if (Storage::move($picture['remote_location'], 'public/'. $path) &&
+
+        $picture = Picture::create([
+            'name'=>$picture['name'],
+            'description'=>$picture['description'],
+            'remote_location' => $path,
+            'type' => $picture['type'],
+            'size' => $picture['size'],
+            'picturable_id' => $id,
+            'picturable_type' => $this->picType
+        ]))
+            return $picture;
+        else return false;
     }
 
     //TODO: implement a job that deletes temp images that overstay by some period of time.
