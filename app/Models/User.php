@@ -5,10 +5,11 @@ namespace App\Models;
 use App\Util\CRUD\CRUDable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Sleimanx2\Plastic\Searchable;
 
 class User extends Authenticatable implements CRUDable
 {
-    use Notifiable;
+    use Notifiable, Searchable;
 
     protected $table = "users_95319";
     /**
@@ -68,6 +69,19 @@ class User extends Authenticatable implements CRUDable
             ]
         ];
     }
+
+    //#################### SEARCHING ###################//
+
+    public $documentType = 'user';
+
+    public static function index(){
+        foreach (static::all() as $model){
+            $model->document()->save();
+        }
+        return true;
+    }
+
+    //#################### RELATIONSHIP ###################//
 
     //Gym
     public function owned_gym(){

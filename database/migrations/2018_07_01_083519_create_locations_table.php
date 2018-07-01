@@ -30,9 +30,18 @@ class CreateLocationsTable extends Migration
             $table->string('floor')->nullable();
             $table->string('room')->nullable();
 
+            /**
+             * Type of the location.
+             * - gym_location
+             * - user_home_location
+            */
+            $table->double('type')->default("gym_location");
+
             //Geo-location
-            $table->double('latitude')->nullable();
-            $table->double('longitude')->nullable();
+            /**
+             * stored as elasticsearch geo-point "lat,long"
+            */
+            $table->string('latLong');
 
             //polymorphic relationship
             $table->morphs('locatable');

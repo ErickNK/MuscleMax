@@ -2,80 +2,30 @@
 /**
  * Created by PhpStorm.
  * User: erick
- * Date: 5/28/18
- * Time: 10:08 PM
+ * Date: 1/07/18
+ * Time: 10:06 PM
  */
 
-namespace App\Util\CRUD;
+namespace App\Http\GraphQL\Query;
 
 
+use App\Models\Gym;
+use App\Util\CRUD\HandlesGraphQLQueryRequest;
 use Exception;
 use GraphQL\Type\Definition\ResolveInfo;
-use GraphQL\Type\Definition\Type;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\Request;
-use GraphQL;
 use Sleimanx2\Plastic\Facades\Plastic;
 use Sleimanx2\Plastic\Fillers\EloquentFiller;
 use Sleimanx2\Plastic\PlasticResult;
 
-trait HandlesGraphQLQueryRequest
+class Location
 {
 
-    /**
-     * @var $CRUDService \App\Service\CRUDService
-     */
-    protected $CRUDService;
+    use HandlesGraphQLQueryRequest;
 
-    /**
-     * @var $modelType string
-     */
-    protected $modelType;
 
-    /**
-     * Fetch a Model without any restriction.
-     *
-     * @param Request $request
-     * @return Model
-     * @throws Exception
-     */
-    public function GET_ONE(Request $request){
-        if (!$request->id) {
-            if($this->CRUDService->get($request,$request->id)){
-                return $this->CRUDService->data['get'];
-            }else{
-                throw new Exception(json_encode($this->CRUDService->errors));
-            }
-        }else{
-            throw new Exception("Id is required");
-        }
-    }
-
-    /**
-     * Fetch all Models without any restriction.
-     *
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
-     * @throws Exception
-     */
-    public function GET_ALL(Request $request){
-        if($this->CRUDService->getAll($request)){
-            return $this->CRUDService->data['get_all'];
-        }else{
-            throw new Exception(json_encode($this->CRUDService->errors));
-        }
-    }
-
-    public function resolve($root, $args, $context, ResolveInfo $info)
+    public function __construct()
     {
-        if(isset($args['id'])) $context->request->merge($args);
-
-        $fn = $args['method'];
-        try{
-            return $this->{$fn}($context->request);
-        }catch (\Exception $e){
-            return $e;
-        }
+        $this->modelType = "App\\Models\\Location";
     }
 
     public function singleSearch($root, $args, $context, ResolveInfo $info){
@@ -88,13 +38,21 @@ trait HandlesGraphQLQueryRequest
         $results = call_user_func([$this->modelType,'search'])
             ->{$type}($property,$term)
             ->get();
+
+        $hits = array();
+
+        foreach ($results->hits()->where('type','gym_location') as $h){
+            /** @var \App\Models\Location $h */
+            $hits[] = $h->locatable();
+        }
+
         if ($results){
             return [
                 'took' => $results->took(),
                 'totalHits' => $results->totalHits(),
                 'maxScore' => $results->maxScore(),
                 'aggr' => $results->aggregations(),
-                'hits'=>$results->hits(),
+                'hits'=>$hits,
             ];
         }
         return null;
@@ -111,15 +69,24 @@ trait HandlesGraphQLQueryRequest
         $filler = new EloquentFiller();
 
         $filler->fill(${$this->modelType}(), $results);
+
+        $hits = array();
+
+        foreach ($results->hits()->where('type','gym_location') as $h){
+            /** @var \App\Models\Location $h */
+            $hits[] = $h->locatable();
+        }
+
         if ($results){
             return [
                 'took' => $results->took(),
                 'totalHits' => $results->totalHits(),
                 'maxScore' => $results->maxScore(),
                 'aggr' => $results->aggregations(),
-                'hits'=>$results->hits(),
+                'hits'=>$hits
             ];
         }
         return null;
     }
+
 }

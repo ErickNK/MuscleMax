@@ -3,9 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Sleimanx2\Plastic\Searchable;
 
 class Tag extends Model
 {
+
+    use Searchable;
+
     protected $table = 'tags_95319';
 
     protected $fillable = [
@@ -13,6 +17,19 @@ class Tag extends Model
         'description',
         'color',
     ];
+
+    //#################### SEARCHING ###################//
+
+    public $documentType = 'tag';
+
+    public static function index(){
+        foreach (static::all() as $model){
+            $model->document()->save();
+        }
+        return true;
+    }
+
+    //#################### RELATIONSHIP ###################//
 
 //RELATIONSHIPS
     //Meetings

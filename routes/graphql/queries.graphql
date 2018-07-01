@@ -16,11 +16,15 @@ type Query{
         type: String
         property: String
         term: String
-    ): UserSearchResults @field(resolver: "App\\Http\\GraphQL\\Query\\User@search")
+    ): UserSearchResults @field(resolver: "App\\Http\\GraphQL\\Query\\User@singleSearch")
 
     searchGym(
         type: String
         property: String
         term: String
-    ): GymSearchResults @field(resolver: "App\\Http\\GraphQL\\Query\\Gym@search")
+    ): GymSearchResults @field(resolver: "App\\Http\\GraphQL\\Query\\Gym@singleSearch")
+
+    searchGymLocation(
+        raw: String
+    ): GymSearchResults @field(resolver: "App\\Http\\GraphQL\\Query\\Location@complexSearch")
 }

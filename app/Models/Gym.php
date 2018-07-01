@@ -4,9 +4,12 @@ namespace App\Models;
 
 use App\Util\CRUD\CRUDable;
 use Illuminate\Database\Eloquent\Model;
+use Sleimanx2\Plastic\Searchable;
 
 class Gym extends Model implements CRUDable
 {
+
+    use Searchable;
 
     protected $table = "gyms_95319";
 
@@ -52,7 +55,18 @@ class Gym extends Model implements CRUDable
         ];
     }
 
-    //#################### RELATIONSHIPS ###################//
+    //#################### SEARCHING ###################//
+
+    public $documentType = 'gym';
+
+    public static function index(){
+        foreach (static::all() as $model){
+            $model->document()->save();
+        }
+        return true;
+    }
+
+    //#################### RELATIONSHIP ###################//
 
     //owner
     public function owner(){
