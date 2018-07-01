@@ -22,6 +22,16 @@ class CreateUsersTable extends Migration
             $table->string('lastname');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('tel');
+
+            //Mostly for coaches
+            $table->string('bio');
+            /**
+             * - normal : Normal user
+             * - coach : A coach/ gym trainer
+             * - manager : A gym manager
+             * */
+            $table->string('type')->default('normal');
 
             //Record Metadata fields
             $table->rememberToken();

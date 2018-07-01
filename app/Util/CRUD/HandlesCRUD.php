@@ -10,30 +10,11 @@ namespace App\Util\CRUD;
 
 use App\Events\CRUDEvent;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
 trait HandlesCRUD
 {
-
-    /**
-     * Errors found in processing services.
-     *
-     * */
-    public $errors = [];
-
-    /**
-     * Information after processing services.
-     *
-     * */
-    public $data = [];
-
-    /**
-     * Status of the service.
-     *
-     * */
-    public $status = 200;
 
     /**
      * Fetch model's CRUD settings
@@ -121,7 +102,7 @@ trait HandlesCRUD
             /**
              * If the request has the related model itself.
              * Get it from the related model
-            */
+             */
             if ($request->has($key)){
                 $relations[$value] = $request->{$key}[$value];
                 continue;
@@ -129,14 +110,14 @@ trait HandlesCRUD
             /**
              * If the request has only the foreign key field then
              * get it from there.
-            */
+             */
             else if ($request->has($value)){
                 $relations[$value] = $request->{$value};
                 continue;
             }
             /**
              * If there is no field. We cannot persist this to the database.
-            */
+             */
             else {
                 $this->errors['add'] = "Foreign key ". $value . " must be resolved.";
                 $this->status = 500;
@@ -192,10 +173,12 @@ trait HandlesCRUD
             } else {
                 $this->errors['add'] = "Adding resource with id: " . $model->id . "failed";
                 $this->status = 500;
+                return empty($this->errors);
             }
         } catch (\Exception $e) {
             $this->errors['add'] = $e->getMessage();
             $this->status = 500;
+            return empty($this->errors);
         }
 
         //Add hook after creating
@@ -225,6 +208,7 @@ trait HandlesCRUD
             } else {
                 $this->errors['delete'] = "Deleting resource with id: " . $id . "failed";
                 $this->status = 500;
+                return empty($this->errors);
             }
 
             //Add hook after update
@@ -258,6 +242,7 @@ trait HandlesCRUD
             } else {
                 $this->errors['delete'] = "Deleting resource with id: " . $id . "failed";
                 $this->status = 500;
+                return empty($this->errors);
             }
 
             //Add hook after creating
@@ -276,8 +261,6 @@ trait HandlesCRUD
      * @internal param $id
      */
     public function getAll(Request $request){
-        $models = [];
-
         //Add hook before get_all
         if(!$this->beforeGetAll($request))
             return empty($this->errors);
@@ -289,6 +272,7 @@ trait HandlesCRUD
         } catch (\Exception $e) {
             $this->errors['get_all'] = $e->getMessage();
             $this->status = 500;
+            return empty($this->errors);
         }
 
         //Add hook after update
@@ -320,10 +304,12 @@ trait HandlesCRUD
             } else {
                 $this->errors['get'] = "not_found";
                 $this->status = 404;
+                return empty($this->errors);
             }
         } catch (\Exception $e) {
             $this->errors['get'] = $e->getMessage();
             $this->status = 500;
+            return empty($this->errors);
         }
 
         //Add hook after update
@@ -341,13 +327,7 @@ trait HandlesCRUD
     }
 
     public function afterCreate($request,$model){
-        $crudEvent = new CRUDEvent();
-        $crudEvent->setPayload([
-            'crudType' => 'created',
-            'channel' => $this->getEventChannel(),
-            'model' => $model
-        ]);
-        broadcast($crudEvent)->toOthers();
+        //
         return true;
     }
 
@@ -357,13 +337,7 @@ trait HandlesCRUD
     }
 
     public function afterUpdate($request,$model){
-        $crudEvent = new CRUDEvent();
-        $crudEvent->setPayload([
-            'crudType' => 'updated',
-            'channel' => $this->getEventChannel(),
-            'model' => $model
-        ]);
-        broadcast($crudEvent)->toOthers();
+       //
         return true;
     }
 
@@ -373,13 +347,7 @@ trait HandlesCRUD
     }
 
     public function afterDelete($request,$model){
-        $crudEvent = new CRUDEvent();
-        $crudEvent->setPayload([
-            'crudType' => 'deleted',
-            'channel' => $this->getEventChannel(),
-            'model' => $model
-        ]);
-        broadcast($crudEvent)->toOthers();
+       //
         return true;
     }
 

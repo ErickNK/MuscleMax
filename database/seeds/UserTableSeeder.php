@@ -14,6 +14,9 @@ class UserTableSeeder extends Seeder
         \App\Models\User::create([
             "firstname" => "Erick",
             "lastname" => "Njiru",
+            "bio"=>"Gym Lover",
+            "type"=>"normal",
+            "tel"=>"0718931359",
             "email" => "ericknjiru@gmail.com",
             "password" => bcrypt("123456")
         ]);

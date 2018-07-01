@@ -12,10 +12,12 @@ trait DoesResponses
      * @param string $errors
      * @param string $data
      * @param int $status
+     * @param string $message
      * @return \Illuminate\Http\JsonResponse
      */
-    public function errorResponse($errors = '',$data = '',$status = 400){
+    public function errorResponse($errors = '',$data = '',$status = 400,$message = 'failure'){
         return response()->json([
+            'message' => $message,
             'errors' => $errors,
             'data' => $data
         ],$status);
@@ -26,23 +28,12 @@ trait DoesResponses
      *
      * @param string $data
      * @param int $status
+     * @param string $message
      * @return \Illuminate\Http\JsonResponse
      */
-    public function successResponse($data = '',$status = 200){
+    public function successResponse($data = '',$status = 200,$message = 'success'){
         return response()->json([
-            'data' => $data
-        ],$status);
-    }
-
-    /**
-     * Return a created response after an Add method.
-     *
-     * @param string $data
-     * @param int $status
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function createdResponse($data = '',$status = 201){
-        return response()->json([
+            'message' => $message,
             'data' => $data
         ],$status);
     }

@@ -2,18 +2,15 @@
 
 namespace App\Service;
 
-use App\Util\CRUD\CRUDService;
-use App\Util\CRUD\HandlesCRUD;
-use App\Util\CRUD\HandlesImages;
 
-
-class UserService implements CRUDService
+class UserService extends CRUDService
 {
-    use HandlesCRUD, handlesImages;
+
+//    use HandlesRoles;
 
     public function __constructor(){
         $this->picPath = "userPics";
-        $this->picType = "userPic";
+        $this->picType = "user";
     }
 
     public function getModelType()
@@ -24,22 +21,5 @@ class UserService implements CRUDService
     public function getEventChannel()
     {
         return 'user';
-    }
-
-    public function afterCreate($request,$model)
-    {
-//        parent::afterCreate($request,$model);
-
-        //TODO: make Transactable. Should be atomic if it fails
-        //IF THE USER HAS TEMPORARY PICTURES SAVE THEM
-        if($request->has("with_temp_pics")){
-            $pics = [];
-            foreach ($request->pictures as $picture){
-                $pics[] = $this->saveImagesFromTemp($picture,$model->id);
-            }
-            $this->data["pictures"] = $pics;
-        }
-
-        return true;
     }
 }

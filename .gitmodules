@@ -1,0 +1,3 @@
+[submodule "musclemax-laradock"]
+	path = musclemax-laradock
+	url = https://github.com/ErickNK/musclemax-laradock.git

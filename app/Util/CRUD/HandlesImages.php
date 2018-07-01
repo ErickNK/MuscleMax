@@ -10,22 +10,15 @@ use Illuminate\Support\Facades\Storage;
 trait HandlesImages
 {
 
-    /**
-     * Type used to relate the Picture entity with another
-     * entity.
-     *
-     * @var string
-    */
-    protected $picType = 'defaultPic';
+    public function getPicType()
+    {
+        return property_exists($this, 'picType') ? $this->picType : 'defaultPic';
+    }
 
-    /**
-     * Path used to fetch the picture from its location in the
-     * public folder. NB: the path should not include 'public/'
-     * as this is taken care of by the symbolic link setup for the storage.
-     *
-     * @var string
-    */
-    protected $picPath = 'pictures';
+    public function getPicPath()
+    {
+        return property_exists($this, 'picPath') ? $this->picPath : 'pictures';
+    }
 
     /**
      * Path used to store temporary pictures
@@ -43,23 +36,23 @@ trait HandlesImages
      * @param int $id - Id of the model to associate the image with using the picType specified.
     */
     public function handleImage(Request $request,$id){
-        $fileName = explode('.',$request->file($this->picType)->getClientOriginalName());
-        $extension = $request->file($this->picType)->getClientOriginalExtension();
+        $fileName = explode('.',$request->file($this->getPicType())->getClientOriginalName());
+        $extension = $request->file($this->getPicType())->getClientOriginalExtension();
 
         //filename to store
         $fileNameToStore = $fileName[0] . '_' . time() .'.'. $extension;
 
         //Store in public folder
-        $request->file($this->picType)->storeAs('public/' . $this->picPath,$fileNameToStore);
+        $request->file($this->getPicType())->storeAs('public/' . $this->getPicPath(),$fileNameToStore);
 
-        $path = $this->picPath . '/' . $fileNameToStore;
+        $path = $this->getPicPath() . '/' . $fileNameToStore;
 
         Picture::create([
             'name'=>$request->get('name'),
             'description'=>$request->get('description'),
             'location' => $path,
             'picturable_id' => $id,
-            'picturable_type' => $this->picType
+            'picturable_type' => $this->getPicType()
         ]);
     }
 
@@ -73,9 +66,9 @@ trait HandlesImages
         Picture::create([
             'name' => null,
             'description' => null,
-            'location' => $this->picPath .'/'. 'placeHolder.jpg',
+            'location' => $this->getPicPath() .'/'. 'placeHolder.jpg',
             'picturable_id' => $id,
-            'picturable_type' => $this->picType
+            'picturable_type' => $this->getPicType()
         ]);
     }
 
@@ -91,7 +84,7 @@ trait HandlesImages
     public function saveImageFromTemp(Request $request,$id){
         //TODO: add errors
         $fileName = explode('/',$request->image);
-        $path = $this->picPath .'/'. end($fileName);
+        $path = $this->getPicPath() .'/'. end($fileName);
 
         //Store in public folder
         if ( Storage::move($request->image, 'public/'. $path) &&
@@ -103,7 +96,7 @@ trait HandlesImages
             'type' => $request->get('type'),
             'size' => $request->get('size'),
             'picturable_id' => $id,
-            'picturable_type' => $this->picType
+            'picturable_type' => $this->getPicType()
         ]))
             return true;
         else return false;
@@ -112,7 +105,7 @@ trait HandlesImages
     public function saveImagesFromTemp(array $picture,$id){
         //TODO: add errors
         $fileName = explode('/',$picture['remote_location']);
-        $path = $this->picPath .'/'. end($fileName);
+        $path = $this->getPicPath() .'/'. end($fileName);
 
         if (Storage::move($picture['remote_location'], 'public/'. $path) &&
 
@@ -123,7 +116,7 @@ trait HandlesImages
             'type' => $picture['type'],
             'size' => $picture['size'],
             'picturable_id' => $id,
-            'picturable_type' => $this->picType
+            'picturable_type' => $this->getPicType()
         ]))
             return $picture;
         else return false;

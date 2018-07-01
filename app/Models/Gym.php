@@ -2,40 +2,25 @@
 
 namespace App\Models;
 
-use App\Util\CRUD\CRUDable;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable implements CRUDable
+class Gym extends Model
 {
-    use Notifiable;
 
-    protected $table = "users_95319";
+    protected $table = "gyms_95319";
+
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    * The attributes that are mass assignable.
+    *
+    * @var array
+    */
     protected $fillable = [
-        'type',
-        'firstname',
-        'lastname',
-        'bio',
-        'email',
-        'password',
-        'tel',
+        'owner_id',
+        'name',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    //#################### CRUD ###################//
 
-    //CRUD
     public static function crudSettings()
     {
         return[
@@ -44,28 +29,27 @@ class User extends Authenticatable implements CRUDable
              * database
              */
             'attributes' => [
-                'type',
-                'firstname',
-                'lastname',
-                'bio',
-                'email',
-                'password',
-                'tel',
+                'name',
             ],
 
             /**
              * Foreign Keys in the model.
              */
-            'foreign_keys' => false,
+            'foreign_keys' => [
+                'owner_id',
+            ],
 
             /**
              * Models authorized to modify this model
              */
             'owner' => [
-                'id' => null,
+                'owner_id' => null,
             ]
         ];
     }
+
+    //#################### RELATIONSHIPS ###################//
+
 
     //location
     public function location(){
@@ -111,4 +95,5 @@ class User extends Authenticatable implements CRUDable
         }
         return $count;
     }
+
 }
