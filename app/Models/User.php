@@ -24,6 +24,7 @@ class User extends Authenticatable implements CRUDable
         'email',
         'password',
         'tel',
+        'age',
     ];
 
     /**
@@ -47,6 +48,7 @@ class User extends Authenticatable implements CRUDable
                 'type',
                 'firstname',
                 'lastname',
+                'age',
                 'bio',
                 'email',
                 'password',
@@ -62,9 +64,14 @@ class User extends Authenticatable implements CRUDable
              * Models authorized to modify this model
              */
             'owner' => [
-                'id' => null,
+                'id' => 'from_request',
             ]
         ];
+    }
+
+    //Gym
+    public function owned_gym(){
+        return $this->hasOne('App\Models\Gym', 'owner_id');
     }
 
     //location
@@ -79,7 +86,7 @@ class User extends Authenticatable implements CRUDable
 
     //tags
     public function tags(){
-        return $this->morphToMany('App\Models\Tag', 'taggable','tagged');
+        return $this->morphToMany('App\Models\Tag', 'taggable','tagged_95319');
     }
 
     //reviews

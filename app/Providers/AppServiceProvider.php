@@ -19,6 +19,7 @@ class AppServiceProvider extends ServiceProvider
         Relation::morphMap([
             'user' => 'App\Models\User',
             'gym' => 'App\Models\Gym',
+            'weight_measurement' => 'App\Models\Weight_Measurement',
 
         ]);
     }

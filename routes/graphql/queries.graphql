@@ -1,0 +1,26 @@
+type Query{
+
+    viewer: User @auth
+
+    user(
+        method: QUERY_METHOD!
+        id: ID
+    ): [User!]! @field(resolver: "App\\Http\\GraphQL\\Query\\User@resolve")
+
+    gym(
+        method: QUERY_METHOD!
+        id: ID
+    ): [Gym!]! @field(resolver: "App\\Http\\GraphQL\\Query\\Gym@resolve")
+
+    searchUser(
+        type: String
+        property: String
+        term: String
+    ): UserSearchResults @field(resolver: "App\\Http\\GraphQL\\Query\\User@search")
+
+    searchGym(
+        type: String
+        property: String
+        term: String
+    ): GymSearchResults @field(resolver: "App\\Http\\GraphQL\\Query\\Gym@search")
+}

@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 trait HandlesGraphQLMutationRequest
 {
     /**
-     * @var $CRUDService \App\Util\CRUD\HandlesCRUD
+     * @var $CRUDService \App\Service\CRUDService
      */
     protected $CRUDService;
 

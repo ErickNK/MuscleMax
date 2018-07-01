@@ -21,10 +21,7 @@ class Location extends Model
         'zip_code',
         'landmarks',
 
-        //TODO: use tags to distinguish type of location eg. tag location as user's home
-        'type',
-
-        'Building',
+        'building',
         'floor',
         'room',
 

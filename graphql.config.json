@@ -1,0 +1,23 @@
+{
+  "schema": {
+    "request": {
+      "url": "http://localhost/graphql",
+      "method" : "POST",
+      "postIntrospectionQuery" : true,
+      "options" : {
+        "headers": {
+          "user-agent" : "JS GraphQL"
+        }
+      }
+    }
+
+  },
+
+  "README_endpoints": "A list of GraphQL endpoints that can be queried from '.graphql' files in the IDE",
+  "endpoints" : [
+    {
+      "file": "/home/erick/PROJECTS/MuscleMax/routes/graphql/schema.graphql"
+    }
+  ]
+
+}

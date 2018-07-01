@@ -1,0 +1,6 @@
+#import ./typez.graphql
+#import ./queries.graphql
+#import ./mutations.graphql
+#import ./enums.graphql
+#import ./scalars.graphql
+#import ./input_types.graphql

@@ -10,6 +10,7 @@ class Invitation extends Model
 
     protected $fillable = [
         'inviter_id',
+
         'inviteCode',
         'invitee_name',
         'invitee_email',

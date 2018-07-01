@@ -20,10 +20,14 @@ trait HandlesGraphQLQueryRequest
 {
 
     /**
-     * @var $CRUDService \App\Util\CRUD\HandlesCRUD
+     * @var $CRUDService \App\Service\CRUDService
      */
     protected $CRUDService;
 
+    /**
+     * @var $modelType string
+     */
+    protected $modelType;
 
     /**
      * Fetch a Model without any restriction.
@@ -69,5 +73,27 @@ trait HandlesGraphQLQueryRequest
         }catch (\Exception $e){
             return $e;
         }
+    }
+
+    public function search($root, $args, $context, ResolveInfo $info){
+        $type = "match"; $property = "first_name"; $term = "";
+        if (isset($args['type'])) $type = $args['type'];
+        if (isset($args['property'])) $property = $args['property'];
+        if (isset($args['term'])) $term = $args['term'];
+
+
+        $results = call_user_func([$this->modelType,'search'])
+            ->{$type}($property,$term)
+            ->get();
+        if ($results){
+            return [
+                'took' => $results->took(),
+                'totalHits' => $results->totalHits(),
+                'maxScore' => $results->maxScore(),
+                'aggr' => $results->aggregations(),
+                'hits'=>$results->hits(),
+            ];
+        }
+        return null;
     }
 }

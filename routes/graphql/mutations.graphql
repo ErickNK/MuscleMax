@@ -1,0 +1,30 @@
+type Mutation{
+
+    user(
+        method: MUTATION_METHOD!
+        user : User_Input!
+
+        pictures: [Picture_Input!]
+        location: [Location_Input!]
+        #initial weight measurement
+        weight_measurement: [Weight_Measurement_Input!]
+
+        password: String @validate(rules: ["nullable","min:6"])
+    ): User @field(resolver: "App\\Http\\GraphQL\\Mutation\\User@resolve")
+
+    login(
+        email: String!
+        password: String! @validate(rules: ["required","min:6"])
+    ): LoginPayload @field(resolver: "App\\Http\\GraphQL\\Mutation\\Login@resolve")
+
+    gym(
+        method: MUTATION_METHOD!
+        gym : Gym_Input!
+
+        pictures: [Picture_Input!]
+        location: [Location_Input!]
+        #Coaches that belong to a gym
+        coaches: [User!]
+
+    ): User @field(resolver: "App\\Http\\GraphQL\\Mutation\\Gym@resolve")
+}

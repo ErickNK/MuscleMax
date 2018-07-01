@@ -19,7 +19,7 @@ class Gym_Membership extends Model
         return $this->belongsTo('App\Models\User','user_id');
     }
 
-    //user
+    //gym
     public function gym(){
         return $this->belongsTo('App\Models\Gym','gym_id');
     }

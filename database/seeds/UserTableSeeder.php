@@ -15,6 +15,7 @@ class UserTableSeeder extends Seeder
             "firstname" => "Erick",
             "lastname" => "Njiru",
             "bio"=>"Gym Lover",
+            "age"=>21,
             "type"=>"normal",
             "tel"=>"0718931359",
             "email" => "ericknjiru@gmail.com",

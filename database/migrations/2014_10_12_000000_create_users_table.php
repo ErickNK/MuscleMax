@@ -23,9 +23,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('tel');
+            $table->smallInteger('age');
 
             //Mostly for coaches
             $table->string('bio');
+
             /**
              * - normal : Normal user
              * - coach : A coach/ gym trainer

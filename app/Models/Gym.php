@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
+use App\Util\CRUD\CRUDable;
 use Illuminate\Database\Eloquent\Model;
 
-class Gym extends Model
+class Gym extends Model implements CRUDable
 {
 
     protected $table = "gyms_95319";
@@ -16,7 +17,9 @@ class Gym extends Model
     */
     protected $fillable = [
         'owner_id',
+
         'name',
+        'helpline'
     ];
 
     //#################### CRUD ###################//
@@ -30,6 +33,7 @@ class Gym extends Model
              */
             'attributes' => [
                 'name',
+                'helpline'
             ],
 
             /**
@@ -50,10 +54,24 @@ class Gym extends Model
 
     //#################### RELATIONSHIPS ###################//
 
+    //owner
+    public function owner(){
+        return $this->belongsTo('App\Models\User','owner_id');
+    }
 
     //location
     public function location(){
         return $this->morphOne('App\Models\Location', 'locatable');
+    }
+
+    //Gym_Memberships
+    public function gym_memberships(){
+        return $this->hasMany('App\Models\Gym_Membership','gym_id');
+    }
+
+    //Gym_Members
+    public function gym_members(){
+        return $this->belongsToMany('App\Models\User','gym_memberships_95319','gym_id');
     }
 
     //pictures
@@ -63,7 +81,7 @@ class Gym extends Model
 
     //tags
     public function tags(){
-        return $this->morphToMany('App\Models\Tag', 'taggable','tagged');
+        return $this->morphToMany('App\Models\Tag', 'taggable','tagged_95319');
     }
 
     //reviews

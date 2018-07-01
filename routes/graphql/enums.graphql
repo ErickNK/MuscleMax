@@ -1,0 +1,10 @@
+enum QUERY_METHOD {
+    GET_ONE @enum(value: "GET_ONE")
+    GET_ALL @enum(value: "GET_ALL")
+}
+
+enum MUTATION_METHOD{
+    ADD @enum(value: "ADD")
+    UPDATE @enum(value: "UPDATE")
+    DELETE @enum(value: "DELETE")
+}

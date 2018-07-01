@@ -18,12 +18,12 @@ class Tag extends Model
     //Meetings
     public function gyms()
     {
-        return $this->morphedByMany('App\Model\Gym', 'taggable','tagged');
+        return $this->morphedByMany('App\Model\Gym', 'taggable','tagged_95319');
     }
 
     //Events
     public function coaches()
     {
-        return $this->morphedByMany('App\Model\User', 'taggable','tagged');
+        return $this->morphedByMany('App\Model\User', 'taggable','tagged_95319');
     }
 }

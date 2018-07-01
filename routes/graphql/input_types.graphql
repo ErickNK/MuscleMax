@@ -1,0 +1,98 @@
+input User_Input {
+    id : ID!
+    type : String
+    firstname : String
+    lastname : String
+    bio : String
+    age : Int
+    email : String
+    password : String
+    tel : String
+}
+
+input Picture_Input {
+    id: ID!
+    name: String
+    type: String
+    size: Int
+    remote_location: String
+    description: String
+
+    picturable_id: ID!
+    picturable_type: String!
+}
+
+input Location_Input {
+    id: ID!
+
+    country: String
+    county: String
+    city: String
+    street: String
+    zip_code: String
+
+    building: String
+    floor: String
+    room: String
+
+    latitude: Int
+    longitude: Int
+
+    locatable_id: ID!
+    locatable_type: String!
+}
+
+input Gym_Input {
+    id: ID!
+    owner_id: ID!
+
+    name: String
+    helpline: String
+}
+
+
+input Gym_Membership_Input {
+    id: ID!
+    user_id: ID!
+    gym_id: ID!
+
+    join_status: String
+}
+
+input Weight_Measurement_Input {
+    id: ID!
+    owner_id: ID!
+
+    weight : Float
+    height : Float
+    bmi : Float
+    type : String
+
+    created_at: DateTime
+}
+
+input Note_Input {
+    id: ID!
+    owner_id: ID!
+    weight_measurement_id: ID!
+
+    content : String
+
+    created_at: DateTime
+}
+
+input Tag_Input {
+    name: String
+    description: String
+    color: Int
+
+    gym_id: ID
+    coach_id: ID
+}
+
+input Review_Input{
+    content : String
+
+    reviewable_id: ID!
+    reviewable_type: String!
+}

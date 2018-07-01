@@ -1,0 +1,146 @@
+type User {
+    #The id of the user
+    id : ID!
+    type : String
+    firstname : String
+    lastname : String
+    bio : String
+    age : Int
+    email : String
+    tel : String
+    created_at: DateTime
+    updated_at: DateTime
+
+    owned_gym: Gym @belongsTo
+    reviews: [Review!] @hasMany
+    rating: Int @belongsTo
+    rating_user_count: Int @belongsTo
+    tags: [Tag!] @hasMany
+    location: Location
+    pictures: [Picture!] @hasMany
+    gym_memberships: [Gym_Membership!] @hasMany
+}
+
+type UserSearchResults{
+    took : Int
+    totalHits : Int
+    maxScore : Float
+    hits : [User!]
+}
+
+type Gym {
+    id: ID!
+    name: String
+    helpline: String
+    created_at: DateTime
+    updated_at: DateTime
+
+    owner: User @belongsTo
+    gym_members: [User!] @hasMany
+    gym_memberships: [Gym_Membership!] @hasMany
+    pictures: [Picture!] @hasMany
+    reviews: [Review!] @hasMany
+    rating: Int @belongsTo
+    rating_user_count: Int @belongsTo
+    tags: [Tag!] @hasMany
+}
+
+type GymSearchResults{
+    took : Int
+    totalHits : Int
+    maxScore : Float
+    hits : [Gym!]
+}
+
+type Gym_Membership {
+    id: ID!
+    join_status: String
+    created_at: DateTime
+    updated_at: DateTime
+
+    gym: Gym @belongsTo
+    user: User @belongsTo
+}
+
+type Weight_Measurement {
+    id: ID!
+    weight : Float
+    height : Float
+    bmi : Float
+    type : String
+    created_at: DateTime
+    updated_at: DateTime
+
+    note: Note @belongsTo
+    owner: User @belongsTo
+    pictures: [Picture!] @hasMany
+    tags: [Tag!] @hasMany
+}
+
+type Note {
+    id: ID!
+    content : String
+    created_at: DateTime
+    updated_at: DateTime
+
+    weight_measurement: Weight_Measurement @belongsTo
+    owner: User @belongsTo
+}
+
+type Picture {
+    id: ID!
+    name: String
+    type: String
+    size: Int
+    remote_location: String
+    description: String
+    created_at: DateTime
+    updated_at: DateTime
+
+    picturable_id: ID!
+    picturable_type: String!
+}
+
+type Location {
+    id: ID!
+
+    country: String
+    county: String
+    city: String
+    street: String
+    zip_code: String
+
+    building: String
+    floor: String
+    room: String
+
+    latitude: Int
+    longitude: Int
+
+    locatable_id: ID!
+    locatable_type: String
+
+    created_at: DateTime
+    updated_at: DateTime
+}
+
+type Tag{
+    name: String
+    description: String
+    color: Int
+
+    coaches: User @belongsTo
+    gyms: Gym @belongsTo
+}
+
+type Review{
+    content : String
+
+    reviewable_id: ID!
+    reviewable_type: String
+}
+
+type LoginPayload{
+    token: String!
+    user: User!
+}
