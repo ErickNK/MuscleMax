@@ -68,13 +68,14 @@ class Location
         $results = new PlasticResult($results);
         $filler = new EloquentFiller();
 
-        $filler->fill(${$this->modelType}(), $results);
+        $model = $this->modelType;
+        $filler->fill(new $model(), $results);
 
         $hits = array();
 
         foreach ($results->hits()->where('type','gym_location') as $h){
             /** @var \App\Models\Location $h */
-            $hits[] = $h->locatable();
+            $hits[] = $h->locatable()->get()->first();
         }
 
         if ($results){

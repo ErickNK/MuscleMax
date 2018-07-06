@@ -48,7 +48,7 @@ class Weight_Measurement extends Model implements CRUDable
              * Models authorized to modify this model
              */
             'owner' => [
-                'owner_id' => 'from_request',
+                'owner_id' => null,
             ]
         ];
     }

@@ -21,9 +21,9 @@ class UserMapping extends Mapping
     public function map()
     {
         Map::create($this->getModelType(),function(Blueprint $map){
-            $map->string('firstname',['store'=>'false','index'=>'analyzed','analyzer' => 'standard',]);
-            $map->string('lastname',['store'=>'false','index'=>'analyzed','analyzer' => 'standard',]);
-            $map->string('email',['store'=>'false','index'=>'analyzed','analyzer' => 'standard',]);
+            $map->string('firstname',['store'=>'true','index'=>'analyzed','analyzer' => 'standard',]);
+            $map->string('lastname',['store'=>'true','index'=>'analyzed','analyzer' => 'standard',]);
+            $map->string('email',['store'=>'true','index'=>'analyzed','analyzer' => 'standard',]);
         },$this->getModelIndex());
     }
 }

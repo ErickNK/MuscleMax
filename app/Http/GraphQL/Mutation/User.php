@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Mutation;
+namespace App\Http\GraphQL\Mutation;
 
 use App\Service\UserService;
 use App\Util\CRUD\HandlesGraphQLMutationRequest;
@@ -38,6 +38,17 @@ class User
 
         if(isset($args['pictures'])){
             $context->request->request->add(['with_temp_pics' => true]);
+            $context->request->merge(array_merge($args['pictures'],$args));
+        }
+
+        if(isset($args['location'])){
+            $context->request->request->add(['with_location' => true]);
+            $context->request->merge(array_merge($args['location'],$args));
+        }
+
+        if(isset($args['weight_measurement'])){
+            $context->request->request->add(['with_weight_measurement' => true]);
+            $context->request->merge(array_merge($args['weight_measurement'],$args));
         }
 
         $context->request->merge(array_merge($args['user'],$args));

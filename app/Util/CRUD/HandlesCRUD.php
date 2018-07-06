@@ -298,7 +298,7 @@ trait HandlesCRUD
 
         //GET
         try {
-            if ($model = call_user_func_array([$this->getModelType(), 'where'], ['id', '=', $id])->get()->first()) {
+            if ($model = call_user_func_array([$this->getModelType(), 'where'], ['id', '=', $id])->get()) {
                 $this->data = $model;
                 $this->status = 200;
             } else {

@@ -36,18 +36,18 @@ trait HandlesGraphQLQueryRequest
      * Fetch a Model without any restriction.
      *
      * @param Request $request
-     * @return Model
+     * @return array
      * @throws Exception
      */
     public function GET_ONE(Request $request){
-        if (!$request->id) {
+        if ($request->has('id')) {
             if($this->CRUDService->get($request,$request->id)){
-                return $this->CRUDService->data['get'];
+                return $this->CRUDService->data;
             }else{
                 throw new Exception(json_encode($this->CRUDService->errors));
             }
         }else{
-            throw new Exception("Id is required");
+            throw new Exception("id is required");
         }
     }
 
@@ -55,12 +55,12 @@ trait HandlesGraphQLQueryRequest
      * Fetch all Models without any restriction.
      *
      * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * @return array
      * @throws Exception
      */
     public function GET_ALL(Request $request){
         if($this->CRUDService->getAll($request)){
-            return $this->CRUDService->data['get_all'];
+            return $this->CRUDService->data;
         }else{
             throw new Exception(json_encode($this->CRUDService->errors));
         }
@@ -110,7 +110,8 @@ trait HandlesGraphQLQueryRequest
         $results = new PlasticResult($results);
         $filler = new EloquentFiller();
 
-        $filler->fill(${$this->modelType}(), $results);
+        $fn = $this->modelType;
+        $filler->fill(new $fn(), $results);
         if ($results){
             return [
                 'took' => $results->took(),

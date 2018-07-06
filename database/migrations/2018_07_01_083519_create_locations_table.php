@@ -35,13 +35,13 @@ class CreateLocationsTable extends Migration
              * - gym_location
              * - user_home_location
             */
-            $table->double('type')->default("gym_location");
+            $table->string('type')->default("gym_location");
 
             //Geo-location
             /**
              * stored as elasticsearch geo-point "lat,long"
             */
-            $table->string('latLong');
+            $table->string('latLng');
 
             //polymorphic relationship
             $table->morphs('locatable');

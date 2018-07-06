@@ -3,7 +3,7 @@ input User_Input {
     type : String
     firstname : String
     lastname : String
-    bio : String
+    gender : String
     age : Int
     email : String
     password : String
@@ -18,28 +18,17 @@ input Picture_Input {
     remote_location: String
     description: String
 
-    picturable_id: ID!
-    picturable_type: String!
+    picturable_id: ID
+    picturable_type: String
 }
 
 input Location_Input {
     id: ID!
+    address: String
+    latLng: String
 
-    country: String
-    county: String
-    city: String
-    street: String
-    zip_code: String
-
-    building: String
-    floor: String
-    room: String
-
-    latitude: Int
-    longitude: Int
-
-    locatable_id: ID!
-    locatable_type: String!
+    locatable_id: ID
+    locatable_type: String
 }
 
 input Gym_Input {
@@ -82,17 +71,27 @@ input Note_Input {
 }
 
 input Tag_Input {
+    id : ID!
+    owner_id: ID!
+
     name: String
     description: String
     color: Int
+}
 
-    gym_id: ID
-    coach_id: ID
+input Tagged_Input {
+    id : ID!
+    tag_id : ID!
+
+    taggable_id : ID
+    taggable_type : String
 }
 
 input Review_Input{
+    id : ID!
     content : String
+    owner_id: Int!
 
-    reviewable_id: ID!
-    reviewable_type: String!
+    reviewable_id: ID
+    reviewable_type: String
 }

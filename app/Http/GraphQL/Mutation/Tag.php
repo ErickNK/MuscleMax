@@ -1,18 +1,23 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: erick
+ * Date: 4/07/18
+ * Time: 11:05 AM
+ */
 
 namespace App\Http\GraphQL\Mutation;
 
-use App\Service\GymService;
+
+use App\Service\TagService;
 use App\Util\CRUD\HandlesGraphQLMutationRequest;
 use GraphQL\Type\Definition\ResolveInfo;
-use GraphQL\Type\Definition\Type;
-use GraphQL;
 
-class Gym
+class Tag
 {
     use HandlesGraphQLMutationRequest;
 
-    public function __construct(GymService $CRUDService)
+    public function __construct(TagService $CRUDService)
     {
         $this->CRUDService = $CRUDService;
     }
@@ -29,11 +34,16 @@ class Gym
     public function resolve($root, $args, $context, ResolveInfo $info)
     {
 
-        if(isset($args['pictures'])){
-            $context->request->request->add(['with_temp_pics' => true]);
-        }
+        $context->request->merge(array_merge($args['tag'],$args));
 
-        $context->request->merge(array_merge($args['gym'],$args));
+        $fn = $args['method'];
+        return $this->$fn($context->request,$context->request->id ?? $context->request->id);
+    }
+
+    public function tag($root, $args, $context, ResolveInfo $info)
+    {
+
+        $context->request->merge(array_merge($args['tagged'],$args));
 
         $fn = $args['method'];
         return $this->$fn($context->request,$context->request->id ?? $context->request->id);

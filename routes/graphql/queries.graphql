@@ -5,6 +5,7 @@ type Query{
     user(
         method: QUERY_METHOD!
         id: ID
+        type: String
     ): [User!]! @field(resolver: "App\\Http\\GraphQL\\Query\\User@resolve")
 
     gym(
@@ -18,11 +19,15 @@ type Query{
         term: String
     ): UserSearchResults @field(resolver: "App\\Http\\GraphQL\\Query\\User@singleSearch")
 
-    searchGym(
+    gymSingleSearch(
         type: String
         property: String
         term: String
     ): GymSearchResults @field(resolver: "App\\Http\\GraphQL\\Query\\Gym@singleSearch")
+
+    gymComplexSearch(
+        raw: String
+    ): GymSearchResults @field(resolver: "App\\Http\\GraphQL\\Query\\Gym@complexSearch")
 
     searchGymLocation(
         raw: String

@@ -17,19 +17,8 @@ class Location extends Model
      * @var array
      */
     protected $fillable = [
-        'country',
-        'county',
-        'city',
-        'street',
-        'zip_code',
-        'landmarks',
-
-        'building',
-        'floor',
-        'room',
-
+        'address',
         'type',
-
         'latLng',
 
         'locatable_id',

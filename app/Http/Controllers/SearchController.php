@@ -30,12 +30,12 @@ class SearchController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function complex($entity,Request $request){
-        $results = Plastic::getClient()->search(json_decode($request->raw));
+        $results = Plastic::getClient()->search($request->raw);
         $results = new PlasticResult($results);
         $filler = new EloquentFiller();
 
-        //TODO: dynamic creation of new object from module classes
-        $filler->fill(ucfirst($entity)(), $results);
+        $model = 'App\\Models\\' . ucfirst($entity);
+        $filler->fill(new $model(), $results);
         if ($results){
             return $this->successResponse([
                 'took' => $results->took(),

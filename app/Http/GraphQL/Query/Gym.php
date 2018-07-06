@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Query;
+namespace App\Http\GraphQL\Query;
 
 use App\Service\GroupService;
 use App\Service\GymService;

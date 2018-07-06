@@ -2,18 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix'=>'/user', 'middleware'=>['web']],function () {
-
-    Route::post('/login', [
-        'uses' => 'Auth\LoginController@login',
-    ]);
-
-    Route::get('/logout', [
-        'uses' => 'Auth\LoginController@logout',
-    ]);
-
-});
-
 Route::group(['prefix'=>'/temp'],function () {
     Route::post('/storeTempPic',[
         'uses' => 'TempController@storeTempPic',
@@ -64,6 +52,21 @@ Route::group(['prefix'=>'/appinvites', 'middleware'=>['auth.jwt']],function () {
     Route::post('/commitAppInvites', [
         'uses' => 'AppInvitesController@commitAppInvites',
     ]);
+});
+
+Route::group(['prefix'=>'/search', 'middleware'=>['web']],function () {
+    Route::get('index/{entity}',[
+        'uses'=>'SearchController@index'
+    ]);
+
+    Route::post('complex/{entity}',[
+        'uses'=>'SearchController@complex'
+    ]);
+
+    Route::get('simple/{entity}/{property}/{term}',[
+        'uses'=>'SearchController@simple'
+    ]);
+
 });
 
 \App\Util\CRUD\RouteUtils::dynamicAddRoutes('/user','UserController',['web']);

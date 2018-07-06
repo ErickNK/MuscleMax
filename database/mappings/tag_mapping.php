@@ -21,7 +21,7 @@ class TagMapping extends Mapping
     public function map()
     {
         Map::create($this->getModelType(),function(Blueprint $map){
-            $map->string('name',['store'=>'false','index'=>'analyzed','analyzer' => 'standard',]);
+            $map->string('name',['store'=>'true','index'=>'analyzed','analyzer' => 'standard',]);
         },$this->getModelIndex());
     }
 }

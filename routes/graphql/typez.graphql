@@ -4,7 +4,7 @@ type User {
     type : String
     firstname : String
     lastname : String
-    bio : String
+    gender : String
     age : Int
     email : String
     tel : String
@@ -16,9 +16,11 @@ type User {
     rating: Int @belongsTo
     rating_user_count: Int @belongsTo
     tags: [Tag!] @hasMany
+    owned_tags: [Tag!] @hasMany
     location: Location
     pictures: [Picture!] @hasMany
     gym_memberships: [Gym_Membership!] @hasMany
+    weight_measurements: [Weight_Measurement!] @hasMany
 }
 
 type UserSearchResults{
@@ -38,6 +40,7 @@ type Gym {
     owner: User @belongsTo
     gym_members: [User!] @hasMany
     gym_memberships: [Gym_Membership!] @hasMany
+    location: Location
     pictures: [Picture!] @hasMany
     reviews: [Review!] @hasMany
     rating: Int @belongsTo
@@ -64,6 +67,8 @@ type Gym_Membership {
 
 type Weight_Measurement {
     id: ID!
+    owner_id : ID!
+
     weight : Float
     height : Float
     bmi : Float
@@ -103,19 +108,8 @@ type Picture {
 
 type Location {
     id: ID!
-
-    country: String
-    county: String
-    city: String
-    street: String
-    zip_code: String
-
-    building: String
-    floor: String
-    room: String
-
-    latitude: Int
-    longitude: Int
+    address: String
+    latLng: String
 
     locatable_id: ID!
     locatable_type: String
@@ -125,16 +119,20 @@ type Location {
 }
 
 type Tag{
+    id: ID!
     name: String
     description: String
     color: Int
 
     coaches: User @belongsTo
     gyms: Gym @belongsTo
+    owner: User! @belongsTo
 }
 
 type Review{
+    id: ID!
     content : String
+    owner: User! @belongsTo
 
     reviewable_id: ID!
     reviewable_type: String

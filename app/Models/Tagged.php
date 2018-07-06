@@ -19,4 +19,35 @@ class Tagged extends Model
         'taggable_id',
         'taggable_type',
     ];
+
+    //#################### CRUD ###################//
+
+    public static function crudSettings()
+    {
+        return[
+            /**
+             * Attributes that will be persisted to and from the
+             * database
+             */
+            'attributes' => [
+
+            ],
+
+            /**
+             * Foreign Keys in the model.
+             */
+            'foreign_keys' => [
+                'tag_id',
+                'taggable_id',
+                'taggable_type',
+            ],
+
+            /**
+             * Models authorized to modify this model
+             */
+            'owner' => [
+                'owner_id' => null
+            ]
+        ];
+    }
 }

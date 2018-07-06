@@ -25,8 +25,8 @@ return [
     */
     'namespaces' => [
         'models' => 'App\\Models',
-        'mutations' => 'App\\Http\\GraphQL\\Mutations',
-        'queries' => 'App\\Http\\GraphQL\\Queries',
+        'mutations' => 'App\\Http\\GraphQL\\Mutation',
+        'queries' => 'App\\Http\\GraphQL\\Query',
         'scalars' => 'App\\Http\\GraphQL\\Scalars',
     ],
 

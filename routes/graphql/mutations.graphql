@@ -5,9 +5,9 @@ type Mutation{
         user : User_Input!
 
         pictures: [Picture_Input!]
-        location: [Location_Input!]
+        location: Location_Input
         #initial weight measurement
-        weight_measurement: [Weight_Measurement_Input!]
+        weight_measurement: Weight_Measurement_Input
 
         password: String @validate(rules: ["nullable","min:6"])
     ): User @field(resolver: "App\\Http\\GraphQL\\Mutation\\User@resolve")
@@ -22,9 +22,25 @@ type Mutation{
         gym : Gym_Input!
 
         pictures: [Picture_Input!]
-        location: [Location_Input!]
+        location: Location_Input
         #Coaches that belong to a gym
-        coaches: [User!]
+        coaches: [User_Input!]
 
-    ): User @field(resolver: "App\\Http\\GraphQL\\Mutation\\Gym@resolve")
+    ): Gym @field(resolver: "App\\Http\\GraphQL\\Mutation\\Gym@resolve")
+
+    review(
+        method: MUTATION_METHOD!
+        review: Review_Input!
+    ): Review @field(resolver: "App\\Http\\GraphQL\\Mutation\\Review@resolve")
+
+    tag(
+        method: MUTATION_METHOD!
+        tag: Tag_Input!
+    ): Tag @field(resolver: "App\\Http\\GraphQL\\Mutation\\Tag@resolve")
+
+    tagTaggable(
+        method: MUTATION_METHOD!
+        tagged: Tagged_Input!
+    ): Tag @field(resolver: "App\\Http\\GraphQL\\Mutation\\Tagged@resolve")
+
 }
