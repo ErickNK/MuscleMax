@@ -50,7 +50,8 @@ trait HandlesImages
         Picture::create([
             'name'=>$request->get('name'),
             'description'=>$request->get('description'),
-            'location' => $path,
+            'local_location' => $path,
+            'remote_location' => env("APP_URL"). "/storage/" . $this->getPicPath() . "/" . $fileNameToStore,
             'picturable_id' => $id,
             'picturable_type' => $this->getPicType()
         ]);
@@ -66,7 +67,7 @@ trait HandlesImages
         Picture::create([
             'name' => null,
             'description' => null,
-            'location' => $this->getPicPath() .'/'. 'placeHolder.jpg',
+            'remote_location' => env("APP_URL"). "/storage/" . $this->getPicPath() . "/image_placeholder.jpg",
             'picturable_id' => $id,
             'picturable_type' => $this->getPicType()
         ]);
@@ -92,7 +93,8 @@ trait HandlesImages
         Picture::create([
             'name'=>$request->get('name'),
             'description'=>$request->get('description'),
-            'location' => $path,
+            'local_location' => $path,
+            'remote_location' => env("APP_URL"). "/storage/" . $this->getPicPath() . "/" . end($fileName),
             'type' => $request->get('type'),
             'size' => $request->get('size'),
             'picturable_id' => $id,
@@ -112,7 +114,8 @@ trait HandlesImages
         $picture = Picture::create([
             'name'=>$picture['name'],
             'description'=>$picture['description'],
-            'remote_location' => $path,
+            'local_location' => $path,
+            'remote_location' => env("APP_URL"). "/storage/" . $this->getPicPath() . "/" . end($fileName),
             'type' => $picture['type'],
             'size' => $picture['size'],
             'picturable_id' => $id,

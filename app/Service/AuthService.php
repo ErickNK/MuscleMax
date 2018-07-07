@@ -36,9 +36,8 @@ class AuthService extends Service
                 if ($user == null) { //REGISTER USER
 
                     $user = [
-                        'first_name' => $body->given_name ?: "",
-                        'second_name' => "",
-                        'surname' => $body->family_name ?: "",
+                        'firstname' => $body->given_name ?: "",
+                        'lastname' => $body->family_name ?: "",
                         'email' => $body->email ?: "",
                         'pictures' => [
                             0 => [
@@ -84,9 +83,8 @@ class AuthService extends Service
             if ($user == null) { //REGISTER USER
 
                 $user = [
-                    'first_name' =>  $userNode->getFirstName() ?: "",
-                    'second_name' =>  $userNode->getMiddleName() ?: "",
-                    'surname' =>  $userNode->getLastName() ?: "",
+                    'firstname' =>  $userNode->getFirstName() ?: "",
+                    'lastname' =>  $userNode->getLastName() ?: "",
                     'email' =>  $userNode->getEmail() ?: "",
                     'pictures' => [
                         0 => [

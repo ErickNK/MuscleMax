@@ -10,10 +10,9 @@ class UserService extends CRUDService
 
 //    use HandlesRoles;
 
-    public function __constructor(){
-        $this->picPath = "userPics";
-        $this->picType = "user";
-    }
+    protected $picPath = "userPics";
+
+    protected $picType = "user";
 
     public function getModelType()
     {
@@ -23,6 +22,10 @@ class UserService extends CRUDService
     public function getEventChannel()
     {
         return 'user';
+    }
+
+    public function getPolymorphicName(){
+        return "user";
     }
 
     public function afterCreate($request, $model)

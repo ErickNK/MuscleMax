@@ -14,7 +14,7 @@ class UserTableSeeder extends Seeder
         \App\Models\User::create([
             "firstname" => "Erick",
             "lastname" => "Njiru",
-            "bio"=>"Gym Lover",
+            "gender"=>"Male",
             "age"=>21,
             "type"=>"normal",
             "tel"=>"0718931359",
