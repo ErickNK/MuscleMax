@@ -19,7 +19,6 @@ class Users95319TableSeeder extends Seeder
         \DB::table('users_95319')->insert(array (
             0 => 
             array (
-                'id' => 1,
                 'firstname' => 'Erick',
                 'lastname' => 'Njiru',
                 'email' => 'ericknjiru@gmail.com',
@@ -34,7 +33,6 @@ class Users95319TableSeeder extends Seeder
             ),
             1 => 
             array (
-                'id' => 2,
                 'firstname' => 'Anatola',
                 'lastname' => 'Bance',
                 'email' => 'abance0@bravesites.com',
@@ -49,7 +47,6 @@ class Users95319TableSeeder extends Seeder
             ),
             2 => 
             array (
-                'id' => 3,
                 'firstname' => 'Hadria',
                 'lastname' => 'Dufaire',
                 'email' => 'hdufaire1@php.net',
@@ -64,7 +61,6 @@ class Users95319TableSeeder extends Seeder
             ),
             3 => 
             array (
-                'id' => 4,
                 'firstname' => 'Silvia',
                 'lastname' => 'Suggett',
                 'email' => 'ssuggett2@printfriendly.com',
@@ -79,7 +75,6 @@ class Users95319TableSeeder extends Seeder
             ),
             4 => 
             array (
-                'id' => 5,
                 'firstname' => 'Deanna',
                 'lastname' => 'Linebarger',
                 'email' => 'dlinebarger3@scribd.com',
@@ -94,7 +89,6 @@ class Users95319TableSeeder extends Seeder
             ),
             5 => 
             array (
-                'id' => 6,
                 'firstname' => 'Devy',
                 'lastname' => 'Crissil',
                 'email' => 'dcrissil4@phpbb.com',
@@ -109,7 +103,6 @@ class Users95319TableSeeder extends Seeder
             ),
             6 => 
             array (
-                'id' => 7,
                 'firstname' => 'Augustine',
                 'lastname' => 'Orbine',
                 'email' => 'aorbine5@berkeley.edu',
@@ -124,7 +117,6 @@ class Users95319TableSeeder extends Seeder
             ),
             7 => 
             array (
-                'id' => 8,
                 'firstname' => 'Randie',
                 'lastname' => 'Suston',
                 'email' => 'rsuston6@fastcompany.com',
@@ -139,7 +131,6 @@ class Users95319TableSeeder extends Seeder
             ),
             8 => 
             array (
-                'id' => 9,
                 'firstname' => 'Romain',
                 'lastname' => 'Cammis',
                 'email' => 'rcammis7@infoseek.co.jp',
@@ -154,7 +145,6 @@ class Users95319TableSeeder extends Seeder
             ),
             9 => 
             array (
-                'id' => 10,
                 'firstname' => 'Jacenta',
                 'lastname' => 'Rookes',
                 'email' => 'jrookes8@geocities.jp',
@@ -169,7 +159,6 @@ class Users95319TableSeeder extends Seeder
             ),
             10 => 
             array (
-                'id' => 11,
                 'firstname' => 'Hollie',
                 'lastname' => 'Antill',
                 'email' => 'hantill9@elpais.com',
@@ -184,7 +173,6 @@ class Users95319TableSeeder extends Seeder
             ),
             11 => 
             array (
-                'id' => 12,
                 'firstname' => 'Junette',
                 'lastname' => 'Dradey',
                 'email' => 'jdradeya@jalbum.net',
@@ -199,7 +187,6 @@ class Users95319TableSeeder extends Seeder
             ),
             12 => 
             array (
-                'id' => 13,
                 'firstname' => 'Jeno',
                 'lastname' => 'Yearnes',
                 'email' => 'jyearnesb@godaddy.com',
@@ -214,7 +201,6 @@ class Users95319TableSeeder extends Seeder
             ),
             13 => 
             array (
-                'id' => 14,
                 'firstname' => 'Vassili',
                 'lastname' => 'Hrishanok',
                 'email' => 'vhrishanokc@paypal.com',
@@ -229,7 +215,6 @@ class Users95319TableSeeder extends Seeder
             ),
             14 => 
             array (
-                'id' => 15,
                 'firstname' => 'Julina',
                 'lastname' => 'Matthessen',
                 'email' => 'jmatthessend@accuweather.com',
@@ -244,7 +229,6 @@ class Users95319TableSeeder extends Seeder
             ),
             15 => 
             array (
-                'id' => 16,
                 'firstname' => 'Hale',
                 'lastname' => 'Faulkener',
                 'email' => 'hfaulkenere@naver.com',
@@ -259,7 +243,6 @@ class Users95319TableSeeder extends Seeder
             ),
             16 => 
             array (
-                'id' => 17,
                 'firstname' => 'Leicester',
                 'lastname' => 'Fieldgate',
                 'email' => 'lfieldgatef@slashdot.org',
@@ -274,7 +257,6 @@ class Users95319TableSeeder extends Seeder
             ),
             17 => 
             array (
-                'id' => 18,
                 'firstname' => 'Rog',
                 'lastname' => 'Dunstone',
                 'email' => 'rdunstoneg@weebly.com',
@@ -289,7 +271,6 @@ class Users95319TableSeeder extends Seeder
             ),
             18 => 
             array (
-                'id' => 19,
                 'firstname' => 'Hank',
                 'lastname' => 'Cleator',
                 'email' => 'hcleatorh@cloudflare.com',
@@ -304,7 +285,6 @@ class Users95319TableSeeder extends Seeder
             ),
             19 => 
             array (
-                'id' => 20,
                 'firstname' => 'Ashley',
                 'lastname' => 'Stowers',
                 'email' => 'astowersi@digg.com',
@@ -319,7 +299,6 @@ class Users95319TableSeeder extends Seeder
             ),
             20 => 
             array (
-                'id' => 21,
                 'firstname' => 'Bobbi',
                 'lastname' => 'Smorthit',
                 'email' => 'bsmorthitj@yelp.com',
@@ -334,7 +313,6 @@ class Users95319TableSeeder extends Seeder
             ),
             21 => 
             array (
-                'id' => 22,
                 'firstname' => 'Gene',
                 'lastname' => 'Beach',
                 'email' => 'gbeachk@wordpress.org',
@@ -349,7 +327,6 @@ class Users95319TableSeeder extends Seeder
             ),
             22 => 
             array (
-                'id' => 23,
                 'firstname' => 'Valeda',
                 'lastname' => 'Nibley',
                 'email' => 'vnibleyl@economist.com',
@@ -364,7 +341,6 @@ class Users95319TableSeeder extends Seeder
             ),
             23 => 
             array (
-                'id' => 24,
                 'firstname' => 'Laurie',
                 'lastname' => 'Mettrick',
                 'email' => 'lmettrickm@arstechnica.com',
@@ -379,7 +355,6 @@ class Users95319TableSeeder extends Seeder
             ),
             24 => 
             array (
-                'id' => 25,
                 'firstname' => 'Gardener',
                 'lastname' => 'Bellard',
                 'email' => 'gbellardn@jigsy.com',
@@ -394,7 +369,6 @@ class Users95319TableSeeder extends Seeder
             ),
             25 => 
             array (
-                'id' => 26,
                 'firstname' => 'Aguste',
                 'lastname' => 'Konig',
                 'email' => 'akonigo@flavors.me',
@@ -409,7 +383,6 @@ class Users95319TableSeeder extends Seeder
             ),
             26 => 
             array (
-                'id' => 27,
                 'firstname' => 'Rheta',
                 'lastname' => 'Fazzioli',
                 'email' => 'rfazziolip@livejournal.com',
@@ -424,7 +397,6 @@ class Users95319TableSeeder extends Seeder
             ),
             27 => 
             array (
-                'id' => 28,
                 'firstname' => 'Johan',
                 'lastname' => 'Noorwood',
                 'email' => 'jnoorwoodq@ebay.com',
@@ -439,7 +411,6 @@ class Users95319TableSeeder extends Seeder
             ),
             28 => 
             array (
-                'id' => 29,
                 'firstname' => 'Milo',
                 'lastname' => 'McKibben',
                 'email' => 'mmckibbenr@google.it',
@@ -454,7 +425,6 @@ class Users95319TableSeeder extends Seeder
             ),
             29 => 
             array (
-                'id' => 30,
                 'firstname' => 'Kit',
                 'lastname' => 'Meiner',
                 'email' => 'kmeiners@cdbaby.com',
@@ -469,7 +439,6 @@ class Users95319TableSeeder extends Seeder
             ),
             30 => 
             array (
-                'id' => 31,
                 'firstname' => 'Ethelin',
                 'lastname' => 'Findlater',
                 'email' => 'efindlatert@hibu.com',
@@ -484,7 +453,6 @@ class Users95319TableSeeder extends Seeder
             ),
             31 => 
             array (
-                'id' => 32,
                 'firstname' => 'Ericka',
                 'lastname' => 'Jest',
                 'email' => 'ejestu@illinois.edu',
@@ -499,7 +467,6 @@ class Users95319TableSeeder extends Seeder
             ),
             32 => 
             array (
-                'id' => 33,
                 'firstname' => 'Katha',
                 'lastname' => 'Lillow',
                 'email' => 'klillowv@wufoo.com',
@@ -514,7 +481,6 @@ class Users95319TableSeeder extends Seeder
             ),
             33 => 
             array (
-                'id' => 34,
                 'firstname' => 'Tim',
                 'lastname' => 'Battell',
                 'email' => 'tbattellw@npr.org',
@@ -529,7 +495,6 @@ class Users95319TableSeeder extends Seeder
             ),
             34 => 
             array (
-                'id' => 35,
                 'firstname' => 'Konstanze',
                 'lastname' => 'Stonestreet',
                 'email' => 'kstonestreetx@springer.com',
@@ -544,7 +509,6 @@ class Users95319TableSeeder extends Seeder
             ),
             35 => 
             array (
-                'id' => 36,
                 'firstname' => 'Amalee',
                 'lastname' => 'Kalewe',
                 'email' => 'akalewey@twitpic.com',
@@ -559,7 +523,6 @@ class Users95319TableSeeder extends Seeder
             ),
             36 => 
             array (
-                'id' => 37,
                 'firstname' => 'Diana',
                 'lastname' => 'Loren',
                 'email' => 'dlorenz@163.com',
@@ -574,7 +537,6 @@ class Users95319TableSeeder extends Seeder
             ),
             37 => 
             array (
-                'id' => 38,
                 'firstname' => 'Stephi',
                 'lastname' => 'Alliban',
                 'email' => 'salliban10@hao123.com',
@@ -589,7 +551,6 @@ class Users95319TableSeeder extends Seeder
             ),
             38 => 
             array (
-                'id' => 39,
                 'firstname' => 'Ginevra',
                 'lastname' => 'Bakewell',
                 'email' => 'gbakewell11@independent.co.uk',
@@ -604,7 +565,6 @@ class Users95319TableSeeder extends Seeder
             ),
             39 => 
             array (
-                'id' => 40,
                 'firstname' => 'Danyelle',
                 'lastname' => 'Pfleger',
                 'email' => 'dpfleger12@abc.net.au',
@@ -619,7 +579,6 @@ class Users95319TableSeeder extends Seeder
             ),
             40 => 
             array (
-                'id' => 41,
                 'firstname' => 'Redd',
                 'lastname' => 'Longbothom',
                 'email' => 'rlongbothom13@seattletimes.com',
@@ -634,7 +593,6 @@ class Users95319TableSeeder extends Seeder
             ),
             41 => 
             array (
-                'id' => 42,
                 'firstname' => 'Ortensia',
                 'lastname' => 'Couvet',
                 'email' => 'ocouvet14@wordpress.com',
@@ -649,7 +607,6 @@ class Users95319TableSeeder extends Seeder
             ),
             42 => 
             array (
-                'id' => 43,
                 'firstname' => 'Carlene',
                 'lastname' => 'Woolward',
                 'email' => 'cwoolward15@drupal.org',
@@ -664,7 +621,6 @@ class Users95319TableSeeder extends Seeder
             ),
             43 => 
             array (
-                'id' => 44,
                 'firstname' => 'Tish',
                 'lastname' => 'Adamiak',
                 'email' => 'tadamiak16@unicef.org',
@@ -679,7 +635,6 @@ class Users95319TableSeeder extends Seeder
             ),
             44 => 
             array (
-                'id' => 45,
                 'firstname' => 'Felita',
                 'lastname' => 'Andre',
                 'email' => 'fandre17@typepad.com',
@@ -694,7 +649,6 @@ class Users95319TableSeeder extends Seeder
             ),
             45 => 
             array (
-                'id' => 46,
                 'firstname' => 'Hanni',
                 'lastname' => 'Mariault',
                 'email' => 'hmariault18@house.gov',
@@ -709,7 +663,6 @@ class Users95319TableSeeder extends Seeder
             ),
             46 => 
             array (
-                'id' => 47,
                 'firstname' => 'Wilmar',
                 'lastname' => 'Backe',
                 'email' => 'wbacke19@yahoo.co.jp',
@@ -724,7 +677,6 @@ class Users95319TableSeeder extends Seeder
             ),
             47 => 
             array (
-                'id' => 48,
                 'firstname' => 'Ruggiero',
                 'lastname' => 'Cossum',
                 'email' => 'rcossum1a@nifty.com',
@@ -739,7 +691,6 @@ class Users95319TableSeeder extends Seeder
             ),
             48 => 
             array (
-                'id' => 49,
                 'firstname' => 'Lorianne',
                 'lastname' => 'McCray',
                 'email' => 'lmccray1b@chronoengine.com',
@@ -754,7 +705,6 @@ class Users95319TableSeeder extends Seeder
             ),
             49 => 
             array (
-                'id' => 50,
                 'firstname' => 'Dionisio',
                 'lastname' => 'Sebrook',
                 'email' => 'dsebrook1c@bloglines.com',
@@ -769,7 +719,6 @@ class Users95319TableSeeder extends Seeder
             ),
             50 => 
             array (
-                'id' => 51,
                 'firstname' => 'Deb',
                 'lastname' => 'Laurisch',
                 'email' => 'dlaurisch1d@comsenz.com',
@@ -784,7 +733,6 @@ class Users95319TableSeeder extends Seeder
             ),
             51 => 
             array (
-                'id' => 52,
                 'firstname' => 'Emelita',
                 'lastname' => 'Southon',
                 'email' => 'esouthon1e@omniture.com',
@@ -799,7 +747,6 @@ class Users95319TableSeeder extends Seeder
             ),
             52 => 
             array (
-                'id' => 53,
                 'firstname' => 'Sunny',
                 'lastname' => 'Rodmell',
                 'email' => 'srodmell1f@nationalgeographic.com',
@@ -814,7 +761,6 @@ class Users95319TableSeeder extends Seeder
             ),
             53 => 
             array (
-                'id' => 54,
                 'firstname' => 'Kenton',
                 'lastname' => 'Castro',
                 'email' => 'kcastro1g@about.me',
@@ -829,7 +775,6 @@ class Users95319TableSeeder extends Seeder
             ),
             54 => 
             array (
-                'id' => 55,
                 'firstname' => 'Rianon',
                 'lastname' => 'Jagoe',
                 'email' => 'rjagoe1h@toplist.cz',
@@ -844,7 +789,6 @@ class Users95319TableSeeder extends Seeder
             ),
             55 => 
             array (
-                'id' => 56,
                 'firstname' => 'Jethro',
                 'lastname' => 'Epsly',
                 'email' => 'jepsly1i@biglobe.ne.jp',
@@ -859,7 +803,6 @@ class Users95319TableSeeder extends Seeder
             ),
             56 => 
             array (
-                'id' => 57,
                 'firstname' => 'Siouxie',
                 'lastname' => 'Baigent',
                 'email' => 'sbaigent1j@nytimes.com',
@@ -874,7 +817,6 @@ class Users95319TableSeeder extends Seeder
             ),
             57 => 
             array (
-                'id' => 58,
                 'firstname' => 'Tersina',
                 'lastname' => 'Anmore',
                 'email' => 'tanmore1k@chronoengine.com',
@@ -889,7 +831,6 @@ class Users95319TableSeeder extends Seeder
             ),
             58 => 
             array (
-                'id' => 59,
                 'firstname' => 'Zacharia',
                 'lastname' => 'Frederick',
                 'email' => 'zfrederick1l@shinystat.com',
@@ -904,7 +845,6 @@ class Users95319TableSeeder extends Seeder
             ),
             59 => 
             array (
-                'id' => 60,
                 'firstname' => 'Cristi',
                 'lastname' => 'Allabush',
                 'email' => 'callabush1m@intel.com',
@@ -919,7 +859,6 @@ class Users95319TableSeeder extends Seeder
             ),
             60 => 
             array (
-                'id' => 61,
                 'firstname' => 'Vonny',
                 'lastname' => 'Beilby',
                 'email' => 'vbeilby1n@howstuffworks.com',
@@ -934,7 +873,6 @@ class Users95319TableSeeder extends Seeder
             ),
             61 => 
             array (
-                'id' => 62,
                 'firstname' => 'Babbie',
                 'lastname' => 'Bonsall',
                 'email' => 'bbonsall1o@mediafire.com',
@@ -949,7 +887,6 @@ class Users95319TableSeeder extends Seeder
             ),
             62 => 
             array (
-                'id' => 63,
                 'firstname' => 'Cindy',
                 'lastname' => 'Wann',
                 'email' => 'cwann1p@epa.gov',
@@ -964,7 +901,6 @@ class Users95319TableSeeder extends Seeder
             ),
             63 => 
             array (
-                'id' => 64,
                 'firstname' => 'Jade',
                 'lastname' => 'Shapcote',
                 'email' => 'jshapcote1q@cbsnews.com',
@@ -979,7 +915,6 @@ class Users95319TableSeeder extends Seeder
             ),
             64 => 
             array (
-                'id' => 65,
                 'firstname' => 'Sadie',
                 'lastname' => 'Pendre',
                 'email' => 'spendre1r@marketwatch.com',
@@ -994,7 +929,6 @@ class Users95319TableSeeder extends Seeder
             ),
             65 => 
             array (
-                'id' => 66,
                 'firstname' => 'Dina',
                 'lastname' => 'Matiewe',
                 'email' => 'dmatiewe1s@imageshack.us',
@@ -1009,7 +943,6 @@ class Users95319TableSeeder extends Seeder
             ),
             66 => 
             array (
-                'id' => 67,
                 'firstname' => 'Angel',
                 'lastname' => 'Woloschinski',
                 'email' => 'awoloschinski1t@weather.com',
@@ -1024,7 +957,6 @@ class Users95319TableSeeder extends Seeder
             ),
             67 => 
             array (
-                'id' => 68,
                 'firstname' => 'Godfry',
                 'lastname' => 'O\'Deegan',
                 'email' => 'godeegan1u@ftc.gov',
@@ -1039,7 +971,6 @@ class Users95319TableSeeder extends Seeder
             ),
             68 => 
             array (
-                'id' => 69,
                 'firstname' => 'Merlina',
                 'lastname' => 'Jobbins',
                 'email' => 'mjobbins1v@nasa.gov',
@@ -1054,7 +985,6 @@ class Users95319TableSeeder extends Seeder
             ),
             69 => 
             array (
-                'id' => 70,
                 'firstname' => 'Albert',
                 'lastname' => 'Ringham',
                 'email' => 'aringham1w@over-blog.com',
@@ -1069,7 +999,6 @@ class Users95319TableSeeder extends Seeder
             ),
             70 => 
             array (
-                'id' => 71,
                 'firstname' => 'Rog',
                 'lastname' => 'Felix',
                 'email' => 'rfelix1x@biblegateway.com',
@@ -1084,7 +1013,6 @@ class Users95319TableSeeder extends Seeder
             ),
             71 => 
             array (
-                'id' => 72,
                 'firstname' => 'Ryun',
                 'lastname' => 'Mundford',
                 'email' => 'rmundford1y@wisc.edu',
@@ -1099,7 +1027,6 @@ class Users95319TableSeeder extends Seeder
             ),
             72 => 
             array (
-                'id' => 73,
                 'firstname' => 'Glen',
                 'lastname' => 'Le Provost',
                 'email' => 'gleprovost1z@4shared.com',
@@ -1114,7 +1041,6 @@ class Users95319TableSeeder extends Seeder
             ),
             73 => 
             array (
-                'id' => 74,
                 'firstname' => 'Gay',
                 'lastname' => 'Hambly',
                 'email' => 'ghambly20@tiny.cc',
@@ -1129,7 +1055,6 @@ class Users95319TableSeeder extends Seeder
             ),
             74 => 
             array (
-                'id' => 75,
                 'firstname' => 'Corrine',
                 'lastname' => 'Axford',
                 'email' => 'caxford21@edublogs.org',
@@ -1144,7 +1069,6 @@ class Users95319TableSeeder extends Seeder
             ),
             75 => 
             array (
-                'id' => 76,
                 'firstname' => 'Shandy',
                 'lastname' => 'Dufore',
                 'email' => 'sdufore22@nymag.com',
@@ -1159,7 +1083,6 @@ class Users95319TableSeeder extends Seeder
             ),
             76 => 
             array (
-                'id' => 77,
                 'firstname' => 'Caron',
                 'lastname' => 'Gabriely',
                 'email' => 'cgabriely23@fc2.com',
@@ -1174,7 +1097,6 @@ class Users95319TableSeeder extends Seeder
             ),
             77 => 
             array (
-                'id' => 78,
                 'firstname' => 'Delly',
                 'lastname' => 'Harnor',
                 'email' => 'dharnor24@scribd.com',
@@ -1189,7 +1111,6 @@ class Users95319TableSeeder extends Seeder
             ),
             78 => 
             array (
-                'id' => 79,
                 'firstname' => 'Mickie',
                 'lastname' => 'Golbourn',
                 'email' => 'mgolbourn25@timesonline.co.uk',
@@ -1204,7 +1125,6 @@ class Users95319TableSeeder extends Seeder
             ),
             79 => 
             array (
-                'id' => 80,
                 'firstname' => 'Tulley',
                 'lastname' => 'Middis',
                 'email' => 'tmiddis26@cam.ac.uk',
@@ -1219,7 +1139,6 @@ class Users95319TableSeeder extends Seeder
             ),
             80 => 
             array (
-                'id' => 81,
                 'firstname' => 'Dorry',
                 'lastname' => 'Stout',
                 'email' => 'dstout27@archive.org',
@@ -1234,7 +1153,6 @@ class Users95319TableSeeder extends Seeder
             ),
             81 => 
             array (
-                'id' => 82,
                 'firstname' => 'Aguste',
                 'lastname' => 'Itzak',
                 'email' => 'aitzak28@dion.ne.jp',
@@ -1249,7 +1167,6 @@ class Users95319TableSeeder extends Seeder
             ),
             82 => 
             array (
-                'id' => 83,
                 'firstname' => 'Brewster',
                 'lastname' => 'Stoltz',
                 'email' => 'bstoltz29@craigslist.org',
@@ -1264,7 +1181,6 @@ class Users95319TableSeeder extends Seeder
             ),
             83 => 
             array (
-                'id' => 84,
                 'firstname' => 'Sol',
                 'lastname' => 'Cuttle',
                 'email' => 'scuttle2a@utexas.edu',
@@ -1279,7 +1195,6 @@ class Users95319TableSeeder extends Seeder
             ),
             84 => 
             array (
-                'id' => 85,
                 'firstname' => 'Elysee',
                 'lastname' => 'Townley',
                 'email' => 'etownley2b@dell.com',
@@ -1294,7 +1209,6 @@ class Users95319TableSeeder extends Seeder
             ),
             85 => 
             array (
-                'id' => 86,
                 'firstname' => 'Doralynn',
                 'lastname' => 'Habben',
                 'email' => 'dhabben2c@virginia.edu',
@@ -1309,7 +1223,6 @@ class Users95319TableSeeder extends Seeder
             ),
             86 => 
             array (
-                'id' => 87,
                 'firstname' => 'Javier',
                 'lastname' => 'Maffetti',
                 'email' => 'jmaffetti2d@altervista.org',
@@ -1324,7 +1237,6 @@ class Users95319TableSeeder extends Seeder
             ),
             87 => 
             array (
-                'id' => 88,
                 'firstname' => 'Linette',
                 'lastname' => 'Birkenhead',
                 'email' => 'lbirkenhead2e@marketwatch.com',
@@ -1339,7 +1251,6 @@ class Users95319TableSeeder extends Seeder
             ),
             88 => 
             array (
-                'id' => 89,
                 'firstname' => 'Fonz',
                 'lastname' => 'Armal',
                 'email' => 'farmal2f@mac.com',
@@ -1354,7 +1265,6 @@ class Users95319TableSeeder extends Seeder
             ),
             89 => 
             array (
-                'id' => 90,
                 'firstname' => 'Zoe',
                 'lastname' => 'Heake',
                 'email' => 'zheake2g@cafepress.com',
@@ -1369,7 +1279,6 @@ class Users95319TableSeeder extends Seeder
             ),
             90 => 
             array (
-                'id' => 91,
                 'firstname' => 'Homere',
                 'lastname' => 'Loftie',
                 'email' => 'hloftie2h@narod.ru',
@@ -1384,7 +1293,6 @@ class Users95319TableSeeder extends Seeder
             ),
             91 => 
             array (
-                'id' => 92,
                 'firstname' => 'Shelley',
                 'lastname' => 'Macartney',
                 'email' => 'smacartney2i@redcross.org',
@@ -1399,7 +1307,6 @@ class Users95319TableSeeder extends Seeder
             ),
             92 => 
             array (
-                'id' => 93,
                 'firstname' => 'Carlota',
                 'lastname' => 'Schnitter',
                 'email' => 'cschnitter2j@forbes.com',
@@ -1414,7 +1321,6 @@ class Users95319TableSeeder extends Seeder
             ),
             93 => 
             array (
-                'id' => 94,
                 'firstname' => 'Rebekkah',
                 'lastname' => 'McQuilliam',
                 'email' => 'rmcquilliam2k@bing.com',
@@ -1429,7 +1335,6 @@ class Users95319TableSeeder extends Seeder
             ),
             94 => 
             array (
-                'id' => 95,
                 'firstname' => 'Ollie',
                 'lastname' => 'Huston',
                 'email' => 'ohuston2l@naver.com',
@@ -1444,7 +1349,6 @@ class Users95319TableSeeder extends Seeder
             ),
             95 => 
             array (
-                'id' => 96,
                 'firstname' => 'Clemente',
                 'lastname' => 'Ewestace',
                 'email' => 'cewestace2m@wired.com',
@@ -1459,7 +1363,6 @@ class Users95319TableSeeder extends Seeder
             ),
             96 => 
             array (
-                'id' => 97,
                 'firstname' => 'Kele',
                 'lastname' => 'Cotterell',
                 'email' => 'kcotterell2n@moonfruit.com',
@@ -1474,7 +1377,6 @@ class Users95319TableSeeder extends Seeder
             ),
             97 => 
             array (
-                'id' => 98,
                 'firstname' => 'Berget',
                 'lastname' => 'Cunrado',
                 'email' => 'bcunrado2o@state.tx.us',
@@ -1489,7 +1391,6 @@ class Users95319TableSeeder extends Seeder
             ),
             98 => 
             array (
-                'id' => 99,
                 'firstname' => 'Micheil',
                 'lastname' => 'Prenty',
                 'email' => 'mprenty2p@studiopress.com',
@@ -1504,7 +1405,6 @@ class Users95319TableSeeder extends Seeder
             ),
             99 => 
             array (
-                'id' => 100,
                 'firstname' => 'Bail',
                 'lastname' => 'Jadczak',
                 'email' => 'bjadczak2q@storify.com',
@@ -1519,7 +1419,6 @@ class Users95319TableSeeder extends Seeder
             ),
             100 => 
             array (
-                'id' => 101,
                 'firstname' => 'Bea',
                 'lastname' => 'Galliver',
                 'email' => 'bgalliver2r@google.com',
@@ -1530,6 +1429,20 @@ class Users95319TableSeeder extends Seeder
                 'remember_token' => NULL,
                 'created_at' => '2017-08-13 00:00:00',
                 'updated_at' => '2017-10-29 00:00:00',
+                'gender' => 'Male',
+            ),
+            101 => 
+            array (
+                'firstname' => 'Erick',
+                'lastname' => 'NK',
+                'email' => 'ericknjiru78@gmail.com',
+                'password' => '$2y$10$9OmkfhVf8hoo4oAh5x8SxeJEn4l0vckRYR0yS7kgvYSyuA46r4Mi6',
+                'tel' => '0718931359',
+                'age' => 23,
+                'type' => 'normal',
+                'remember_token' => NULL,
+                'created_at' => '2018-07-07 12:41:55',
+                'updated_at' => '2018-07-07 12:41:55',
                 'gender' => 'Male',
             ),
         ));

@@ -19,7 +19,6 @@ class Locations95319TableSeeder extends Seeder
         \DB::table('locations_95319')->insert(array (
             0 => 
             array (
-                'id' => 75,
                 'type' => 'gym_location',
                 'latLng' => '-19.976589, 48.373600
 
@@ -32,7 +31,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             1 => 
             array (
-                'id' => 37,
                 'type' => 'gym_location',
                 'latLng' => '11.961337, 16.871570
 
@@ -45,7 +43,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             2 => 
             array (
-                'id' => 66,
                 'type' => 'gym_location',
                 'latLng' => '-27.497125, 29.649368
 
@@ -58,7 +55,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             3 => 
             array (
-                'id' => 12,
                 'type' => 'gym_location',
                 'latLng' => '-1.313361, 36.642230
 
@@ -71,7 +67,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             4 => 
             array (
-                'id' => 4,
                 'type' => 'gym_location',
                 'latLng' => '-1.308812, 36.817080',
                 'locatable_type' => 'gym',
@@ -82,7 +77,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             5 => 
             array (
-                'id' => 50,
                 'type' => 'gym_location',
                 'latLng' => '9.418603, 18.929489
 
@@ -95,7 +89,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             6 => 
             array (
-                'id' => 44,
                 'type' => 'gym_location',
                 'latLng' => '12.305045, 5.094226
 
@@ -108,7 +101,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             7 => 
             array (
-                'id' => 74,
                 'type' => 'gym_location',
                 'latLng' => '-17.387977, 46.371087
 
@@ -121,7 +113,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             8 => 
             array (
-                'id' => 6,
                 'type' => 'gym_location',
                 'latLng' => '-1.322606, 36.809295',
                 'locatable_type' => 'gym',
@@ -132,7 +123,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             9 => 
             array (
-                'id' => 93,
                 'type' => 'gym_location',
                 'latLng' => '49.495585, 27.019693
 
@@ -145,7 +135,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             10 => 
             array (
-                'id' => 96,
                 'type' => 'gym_location',
                 'latLng' => '45.335982, 0.648849
 
@@ -158,7 +147,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             11 => 
             array (
-                'id' => 7,
                 'type' => 'gym_location',
                 'latLng' => '-1.324996, 36.820149',
                 'locatable_type' => 'gym',
@@ -169,7 +157,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             12 => 
             array (
-                'id' => 51,
                 'type' => 'gym_location',
                 'latLng' => '12.393697, 23.733438
 
@@ -182,7 +169,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             13 => 
             array (
-                'id' => 82,
                 'type' => 'gym_location',
                 'latLng' => '31.290359, 38.282712
 
@@ -195,7 +181,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             14 => 
             array (
-                'id' => 17,
                 'type' => 'gym_location',
                 'latLng' => '-0.651658, 38.483676
 
@@ -208,7 +193,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             15 => 
             array (
-                'id' => 99,
                 'type' => 'gym_location',
                 'latLng' => '52.516029, -2.925687',
                 'locatable_type' => 'gym',
@@ -219,7 +203,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             16 => 
             array (
-                'id' => 49,
                 'type' => 'gym_location',
                 'latLng' => '7.188219, 13.312564
 
@@ -232,7 +215,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             17 => 
             array (
-                'id' => 76,
                 'type' => 'gym_location',
                 'latLng' => '-14.972167, 49.008998
 
@@ -245,7 +227,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             18 => 
             array (
-                'id' => 57,
                 'type' => 'gym_location',
                 'latLng' => '-12.809143, 14.168311
 
@@ -258,7 +239,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             19 => 
             array (
-                'id' => 69,
                 'type' => 'gym_location',
                 'latLng' => '-23.478977, 44.701165
 
@@ -271,7 +251,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             20 => 
             array (
-                'id' => 19,
                 'type' => 'gym_location',
                 'latLng' => '-0.645126, 34.489046
 
@@ -284,7 +263,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             21 => 
             array (
-                'id' => 89,
                 'type' => 'gym_location',
                 'latLng' => '26.581746, 73.835857
 
@@ -297,7 +275,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             22 => 
             array (
-                'id' => 54,
                 'type' => 'gym_location',
                 'latLng' => '-1.088835, 9.524834
 
@@ -310,7 +287,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             23 => 
             array (
-                'id' => 47,
                 'type' => 'gym_location',
                 'latLng' => '9.527951, 5.774059
 
@@ -323,7 +299,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             24 => 
             array (
-                'id' => 11,
                 'type' => 'gym_location',
                 'latLng' => '-1.264821, 36.685199
 
@@ -336,7 +311,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             25 => 
             array (
-                'id' => 40,
                 'type' => 'gym_location',
                 'latLng' => '9.196930, 13.883289
 
@@ -349,7 +323,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             26 => 
             array (
-                'id' => 5,
                 'type' => 'gym_location',
                 'latLng' => '-1.309476, 36.830119',
                 'locatable_type' => 'gym',
@@ -360,7 +333,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             27 => 
             array (
-                'id' => 55,
                 'type' => 'gym_location',
                 'latLng' => '-1.550629, 11.409461
 
@@ -373,7 +345,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             28 => 
             array (
-                'id' => 14,
                 'type' => 'gym_location',
                 'latLng' => '-1.218069, 36.974279
 
@@ -386,7 +357,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             29 => 
             array (
-                'id' => 83,
                 'type' => 'gym_location',
                 'latLng' => '34.031691, 41.494256
 
@@ -399,7 +369,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             30 => 
             array (
-                'id' => 53,
                 'type' => 'gym_location',
                 'latLng' => '-2.695381, 16.878572
 
@@ -412,7 +381,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             31 => 
             array (
-                'id' => 90,
                 'type' => 'gym_location',
                 'latLng' => '33.392046, 87.722390
 
@@ -425,7 +393,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             32 => 
             array (
-                'id' => 1,
                 'type' => 'gym_location',
                 'latLng' => '-1.315708, 36.817445',
                 'locatable_type' => 'gym',
@@ -436,7 +403,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             33 => 
             array (
-                'id' => 63,
                 'type' => 'gym_location',
                 'latLng' => '-32.297162, 25.599212
 
@@ -449,7 +415,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             34 => 
             array (
-                'id' => 68,
                 'type' => 'gym_location',
                 'latLng' => '-22.791993, 33.626947
 
@@ -462,7 +427,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             35 => 
             array (
-                'id' => 78,
                 'type' => 'gym_location',
                 'latLng' => '24.582760, 28.195751
 
@@ -475,7 +439,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             36 => 
             array (
-                'id' => 22,
                 'type' => 'gym_location',
                 'latLng' => '6.880012, 38.066475
 
@@ -488,7 +451,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             37 => 
             array (
-                'id' => 15,
                 'type' => 'gym_location',
                 'latLng' => '-0.948857, 37.268629
 
@@ -501,7 +463,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             38 => 
             array (
-                'id' => 94,
                 'type' => 'gym_location',
                 'latLng' => '50.282403, 11.776169
 
@@ -514,7 +475,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             39 => 
             array (
-                'id' => 8,
                 'type' => 'gym_location',
                 'latLng' => '-1.321907, 36.855597
 
@@ -527,7 +487,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             40 => 
             array (
-                'id' => 18,
                 'type' => 'gym_location',
                 'latLng' => '-0.357706, 35.867406
 
@@ -540,7 +499,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             41 => 
             array (
-                'id' => 65,
                 'type' => 'gym_location',
                 'latLng' => '-29.244379, 28.839337
 
@@ -553,7 +511,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             42 => 
             array (
-                'id' => 91,
                 'type' => 'gym_location',
                 'latLng' => '41.730444, 62.301439
 
@@ -566,7 +523,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             43 => 
             array (
-                'id' => 35,
                 'type' => 'gym_location',
                 'latLng' => '8.936553, 47.369617
 
@@ -579,7 +535,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             44 => 
             array (
-                'id' => 32,
                 'type' => 'gym_location',
                 'latLng' => '-1.310080, 16.432117
 
@@ -592,7 +547,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             45 => 
             array (
-                'id' => 46,
                 'type' => 'gym_location',
                 'latLng' => '6.160549, 6.291407
 
@@ -605,7 +559,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             46 => 
             array (
-                'id' => 43,
                 'type' => 'gym_location',
                 'latLng' => '21.133113, 3.336414
 
@@ -618,7 +571,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             47 => 
             array (
-                'id' => 87,
                 'type' => 'gym_location',
                 'latLng' => '27.708739, 66.824740
 
@@ -631,7 +583,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             48 => 
             array (
-                'id' => 95,
                 'type' => 'gym_location',
                 'latLng' => '47.883329, 3.815160
 
@@ -644,7 +595,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             49 => 
             array (
-                'id' => 100,
                 'type' => 'gym_location',
                 'latLng' => '53.004303, 6.286093',
                 'locatable_type' => 'gym',
@@ -655,7 +605,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             50 => 
             array (
-                'id' => 67,
                 'type' => 'gym_location',
                 'latLng' => '-28.051990, 30.877480
 
@@ -668,7 +617,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             51 => 
             array (
-                'id' => 48,
                 'type' => 'gym_location',
                 'latLng' => '10.292389, 10.947542
 
@@ -681,7 +629,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             52 => 
             array (
-                'id' => 42,
                 'type' => 'gym_location',
                 'latLng' => '20.640425, 12.916492
 
@@ -694,7 +641,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             53 => 
             array (
-                'id' => 70,
                 'type' => 'gym_location',
                 'latLng' => '-17.178171, 46.854486
 
@@ -707,7 +653,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             54 => 
             array (
-                'id' => 30,
                 'type' => 'gym_location',
                 'latLng' => '-21.363640, 30.934070
 
@@ -720,7 +665,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             55 => 
             array (
-                'id' => 26,
                 'type' => 'gym_location',
                 'latLng' => '0.819310, 21.793350
 
@@ -733,7 +677,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             56 => 
             array (
-                'id' => 41,
                 'type' => 'gym_location',
                 'latLng' => '22.357627, 20.914539
 
@@ -746,7 +689,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             57 => 
             array (
-                'id' => 23,
                 'type' => 'gym_location',
                 'latLng' => '9.259991, 48.126540
 
@@ -759,7 +701,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             58 => 
             array (
-                'id' => 34,
                 'type' => 'gym_location',
                 'latLng' => '7.719082, 42.975086
 
@@ -772,7 +713,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             59 => 
             array (
-                'id' => 3,
                 'type' => 'gym_location',
                 'latLng' => '-1.311389, 36.810445',
                 'locatable_type' => 'gym',
@@ -783,7 +723,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             60 => 
             array (
-                'id' => 79,
                 'type' => 'gym_location',
                 'latLng' => '27.106406, 44.841498
 
@@ -796,7 +735,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             61 => 
             array (
-                'id' => 9,
                 'type' => 'gym_location',
                 'latLng' => '-1.288442, 36.859545
 
@@ -809,7 +747,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             62 => 
             array (
-                'id' => 77,
                 'type' => 'gym_location',
                 'latLng' => '-13.753029, 49.599405
 
@@ -822,7 +759,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             63 => 
             array (
-                'id' => 25,
                 'type' => 'gym_location',
                 'latLng' => '5.852233, 21.636570
 
@@ -835,7 +771,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             64 => 
             array (
-                'id' => 31,
                 'type' => 'gym_location',
                 'latLng' => '-27.909551, 22.672351
 
@@ -848,7 +783,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             65 => 
             array (
-                'id' => 60,
                 'type' => 'gym_location',
                 'latLng' => '-26.285324, 17.864721
 
@@ -861,7 +795,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             66 => 
             array (
-                'id' => 52,
                 'type' => 'gym_location',
                 'latLng' => '2.956190, 22.218346
 
@@ -874,7 +807,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             67 => 
             array (
-                'id' => 56,
                 'type' => 'gym_location',
                 'latLng' => '-8.565817, 14.292607
 
@@ -887,7 +819,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             68 => 
             array (
-                'id' => 72,
                 'type' => 'gym_location',
                 'latLng' => '-20.175196, 47.777337
 
@@ -900,7 +831,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             69 => 
             array (
-                'id' => 73,
                 'type' => 'gym_location',
                 'latLng' => '-18.245640, 44.811029
 
@@ -913,7 +843,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             70 => 
             array (
-                'id' => 20,
                 'type' => 'gym_location',
                 'latLng' => '2.623719, 39.093532
 
@@ -926,7 +855,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             71 => 
             array (
-                'id' => 85,
                 'type' => 'gym_location',
                 'latLng' => '28.546438, 57.642440
 
@@ -939,7 +867,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             72 => 
             array (
-                'id' => 2,
                 'type' => 'gym_location',
                 'latLng' => '-1.315815, 36.815750',
                 'locatable_type' => 'gym',
@@ -950,7 +877,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             73 => 
             array (
-                'id' => 92,
                 'type' => 'gym_location',
                 'latLng' => '45.208654, 44.524867
 
@@ -963,7 +889,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             74 => 
             array (
-                'id' => 64,
                 'type' => 'gym_location',
                 'latLng' => '-30.737973, 29.048378
 
@@ -976,7 +901,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             75 => 
             array (
-                'id' => 88,
                 'type' => 'gym_location',
                 'latLng' => '33.806478, 69.810119
 
@@ -989,7 +913,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             76 => 
             array (
-                'id' => 80,
                 'type' => 'gym_location',
                 'latLng' => '21.334657, 48.188741
 
@@ -1002,7 +925,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             77 => 
             array (
-                'id' => 13,
                 'type' => 'gym_location',
                 'latLng' => '-1.285897, 36.990735
 
@@ -1015,7 +937,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             78 => 
             array (
-                'id' => 71,
                 'type' => 'gym_location',
                 'latLng' => '-16.083408, 49.359369
 
@@ -1028,7 +949,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             79 => 
             array (
-                'id' => 16,
                 'type' => 'gym_location',
                 'latLng' => '-1.197049, 38.065595
 
@@ -1041,7 +961,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             80 => 
             array (
-                'id' => 58,
                 'type' => 'gym_location',
                 'latLng' => '-15.700057, 14.758717
 
@@ -1054,7 +973,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             81 => 
             array (
-                'id' => 36,
                 'type' => 'gym_location',
                 'latLng' => '12.734048, 29.088367
 
@@ -1067,7 +985,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             82 => 
             array (
-                'id' => 28,
                 'type' => 'gym_location',
                 'latLng' => '-17.384787, 18.980945
 
@@ -1080,7 +997,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             83 => 
             array (
-                'id' => 61,
                 'type' => 'gym_location',
                 'latLng' => '-29.744736, 18.126021
 
@@ -1093,7 +1009,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             84 => 
             array (
-                'id' => 86,
                 'type' => 'gym_location',
                 'latLng' => '27.146663, 62.527605
 
@@ -1106,7 +1021,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             85 => 
             array (
-                'id' => 38,
                 'type' => 'gym_location',
                 'latLng' => '-1.749376, 12.916492
 
@@ -1119,7 +1033,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             86 => 
             array (
-                'id' => 62,
                 'type' => 'gym_location',
                 'latLng' => '-32.275072, 20.529985
 
@@ -1132,7 +1045,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             87 => 
             array (
-                'id' => 27,
                 'type' => 'gym_location',
                 'latLng' => '-0.173603, 23.204372
 
@@ -1145,7 +1057,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             88 => 
             array (
-                'id' => 24,
                 'type' => 'gym_location',
                 'latLng' => '12.824206, 41.097560
 
@@ -1158,7 +1069,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             89 => 
             array (
-                'id' => 39,
                 'type' => 'gym_location',
                 'latLng' => '-1.749376, 20.826648
 
@@ -1171,7 +1081,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             90 => 
             array (
-                'id' => 97,
                 'type' => 'gym_location',
                 'latLng' => '42.201298, -4.779112
 
@@ -1184,7 +1093,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             91 => 
             array (
-                'id' => 98,
                 'type' => 'gym_location',
                 'latLng' => '42.201298, -4.779112
 
@@ -1197,7 +1105,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             92 => 
             array (
-                'id' => 59,
                 'type' => 'gym_location',
                 'latLng' => '-18.910276, 15.094937
 
@@ -1210,7 +1117,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             93 => 
             array (
-                'id' => 10,
                 'type' => 'gym_location',
                 'latLng' => '-1.283637, 36.801523
 
@@ -1223,7 +1129,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             94 => 
             array (
-                'id' => 33,
                 'type' => 'gym_location',
                 'latLng' => '3.697003, 13.092273
 
@@ -1236,7 +1141,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             95 => 
             array (
-                'id' => 81,
                 'type' => 'gym_location',
                 'latLng' => '22.007227, 53.616702
 
@@ -1249,7 +1153,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             96 => 
             array (
-                'id' => 29,
                 'type' => 'gym_location',
                 'latLng' => '-19.965674, 23.375476
 
@@ -1262,7 +1165,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             97 => 
             array (
-                'id' => 45,
                 'type' => 'gym_location',
                 'latLng' => '6.380943, 9.099870
 
@@ -1275,7 +1177,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             98 => 
             array (
-                'id' => 21,
                 'type' => 'gym_location',
                 'latLng' => '4.038525, 44.125271
 
@@ -1288,7 +1189,6 @@ class Locations95319TableSeeder extends Seeder
             ),
             99 => 
             array (
-                'id' => 84,
                 'type' => 'gym_location',
                 'latLng' => '27.347733, 48.550605
 
